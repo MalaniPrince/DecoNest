@@ -17,7 +17,7 @@ class SplashActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_splash)
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this@SplashActivity, onBoardingActivity::class.java)
+            val intent = Intent(this@SplashActivity, MainActivity::class.java)
             startActivity(intent)
             finish()
         }, splashTime)

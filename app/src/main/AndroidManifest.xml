@@ -13,9 +13,6 @@
         android:theme="@style/Theme.DecoNest"
         tools:targetApi="31" >
         <activity
-            android:name=".onBoardingActivity"
-            android:exported="false" />
-        <activity
             android:name=".SplashActivity"
             android:exported="true" >
             <intent-filter>
