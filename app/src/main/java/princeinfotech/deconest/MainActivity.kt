@@ -1,5 +1,6 @@
 package princeinfotech.deconest
 
+import android.app.Activity
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -9,7 +10,7 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
-import princeinfotech.deconest.databinding.ActivityMainBinding
+import princeinfotech.deconest.databinding.*
 
 class MainActivity : AppCompatActivity() {
 
