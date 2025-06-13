@@ -1,18 +1,13 @@
-package princeinfotech.deconest
+package princeinfotech.deconest.ui.login
 
-import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import princeinfotech.deconest.R
 import princeinfotech.deconest.databinding.ActivityLoginBinding
-import princeinfotech.deconest.databinding.ActivityMainBinding
-import princeinfotech.deconest.databinding.ActivityOnBoardingBinding
 
 class LoginActivity : AppCompatActivity() {
 

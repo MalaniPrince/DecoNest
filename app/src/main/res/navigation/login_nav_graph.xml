@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/LoginFragment"
-        android:name="princeinfotech.deconest.LoginFragment"
+        android:name="princeinfotech.deconest.ui.login.LoginFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_login">
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="princeinfotech.deconest.SecondFragment"
+        android:name="princeinfotech.deconest.ui.home.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
     </fragment>

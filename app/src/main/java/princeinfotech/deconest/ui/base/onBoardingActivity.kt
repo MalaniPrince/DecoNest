@@ -1,10 +1,10 @@
-package princeinfotech.deconest
+package princeinfotech.deconest.ui.base
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import princeinfotech.deconest.databinding.ActivityOnBoardingBinding
+import princeinfotech.deconest.ui.login.LoginActivity
 
 class onBoardingActivity : AppCompatActivity() {
     private lateinit var binding: ActivityOnBoardingBinding

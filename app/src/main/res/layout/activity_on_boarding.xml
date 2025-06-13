@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_primary"
-    tools:context=".onBoardingActivity">
+    tools:context=".ui.base.onBoardingActivity">
 
 <androidx.appcompat.widget.AppCompatImageView
     android:layout_width="@dimen/default_image_size_64dp"
