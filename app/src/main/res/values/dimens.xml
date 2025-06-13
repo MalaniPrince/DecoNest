@@ -7,6 +7,7 @@
     <dimen name="margin_64">64dp</dimen>
     <dimen name="margin_56">56dp</dimen>
     <dimen name="margin_48">48dp</dimen>
+    <dimen name="margin_42">42dp</dimen>
     <dimen name="margin_40">40dp</dimen>
     <dimen name="margin_36">36dp</dimen>
     <dimen name="margin_32">32dp</dimen>
@@ -97,6 +98,7 @@
     <dimen name="font_12">12sp</dimen>
     <dimen name="font_11">11sp</dimen>
     <dimen name="font_25">25sp</dimen>
+    <dimen name="font_40">40sp</dimen>
     <dimen name="default_cardView_height">100dp</dimen>
     <dimen name="small_coin_size_104dp">104dp</dimen>
     <dimen name="medium_coin_size_124dp">124dp</dimen>
