@@ -3,9 +3,11 @@
     <dimen name="width_8">8dp</dimen>
 
     <dimen name="margin_96">96dp</dimen>
+    <dimen name="margin_67">67dp</dimen>
     <dimen name="margin_64">64dp</dimen>
     <dimen name="margin_56">56dp</dimen>
     <dimen name="margin_48">48dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
     <dimen name="margin_36">36dp</dimen>
     <dimen name="margin_32">32dp</dimen>
     <dimen name="margin_28">28dp</dimen>
@@ -57,7 +59,9 @@
 
     <dimen name="player_icon_in_list">64dp</dimen>
 
+    <dimen name="default_image_size_409dp">409dp</dimen>
     <dimen name="default_image_size_310dp">310dp</dimen>
+    <dimen name="default_image_size_262dp">262dp</dimen>
     <dimen name="default_image_size_212dp">212dp</dimen>
     <dimen name="default_image_size_188dp">188dp</dimen>
     <dimen name="default_image_size_144dp">144dp</dimen>
@@ -82,6 +86,7 @@
     <dimen name="card_radius_14dp">14dp</dimen>
     <dimen name="card_radius_20dp">20dp</dimen>
 
+    <dimen name="font_44">44sp</dimen>
     <dimen name="font_40">40sp</dimen>
     <dimen name="font_36">36sp</dimen>
     <dimen name="font_28">28sp</dimen>
@@ -92,7 +97,7 @@
     <dimen name="font_14">14sp</dimen>
     <dimen name="font_12">12sp</dimen>
     <dimen name="font_11">11sp</dimen>
-    <dimen name="font_10">10sp</dimen>
+    <dimen name="font_25">25sp</dimen>
     <dimen name="default_cardView_height">100dp</dimen>
     <dimen name="small_coin_size_104dp">104dp</dimen>
     <dimen name="medium_coin_size_124dp">124dp</dimen>
