@@ -87,6 +87,7 @@
     <dimen name="card_radius_20dp">20dp</dimen>
 
     <dimen name="font_44">44sp</dimen>
+    <dimen name="font_40">40sp</dimen>
     <dimen name="font_36">36sp</dimen>
     <dimen name="font_28">28sp</dimen>
     <dimen name="font_24">24sp</dimen>

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_primary"
-    tools:context=".onBoardingActivity">
+    tools:context=".ui.base.onBoardingActivity">
 
 <androidx.appcompat.widget.AppCompatImageView
     android:layout_width="@dimen/default_image_size_64dp"
@@ -107,9 +107,9 @@ app:layout_constraintTop_toBottomOf="@+id/Title"
         android:text="@string/bottomText"
         android:textStyle="bold"
         android:textSize="@dimen/font_20"
-        android:background="@color/color_light_gold"
         android:layout_marginStart="@dimen/font_25"
         android:layout_marginEnd="@dimen/font_25"
+        android:background="@drawable/button_rounded"
         app:layout_constraintTop_toBottomOf="@+id/subbottomtitle"
         android:layout_marginTop="@dimen/margin_67">
 
