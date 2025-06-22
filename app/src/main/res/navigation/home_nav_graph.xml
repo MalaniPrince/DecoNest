@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/HomeFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="princeinfotech.deconest.ui.home.FirstFragment"
-        android:label="@string/first_fragment_label"
+        android:id="@+id/HomeFragment"
+        android:name="princeinfotech.deconest.ui.home.HomeFragment"
+        android:label="@string/home_label"
         tools:layout="@layout/fragment_first"/>
 
     <fragment

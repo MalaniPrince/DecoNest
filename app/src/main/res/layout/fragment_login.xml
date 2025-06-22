@@ -92,7 +92,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/SignupButton"
+        android:id="@+id/LoginButton"
         android:text="@string/LoginButton"
         android:background="@drawable/button_rounded"
         android:textStyle="bold"
@@ -115,7 +115,7 @@
         android:textColor="@color/color_black"
         android:layout_marginStart="@dimen/margin_40"
         android:layout_marginEnd="@dimen/margin_40"
-        app:layout_constraintTop_toBottomOf="@+id/SignupButton">
+        app:layout_constraintTop_toBottomOf="@+id/LoginButton">
 
     </androidx.appcompat.widget.AppCompatTextView>
 
