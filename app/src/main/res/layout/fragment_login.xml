@@ -49,7 +49,7 @@
         android:src="@drawable/onboardinglogo"
         app:layout_constraintTop_toBottomOf="@+id/Secondtitle"
         android:layout_marginTop="@dimen/margin_24"
-        android:layout_marginStart="@dimen/margin_4">
+        android:layout_marginHorizontal="@dimen/margin_4">
 
     </androidx.appcompat.widget.AppCompatImageView>
 
@@ -103,6 +103,7 @@
         app:layout_constraintTop_toBottomOf="@+id/InputPassward">
 
     </androidx.appcompat.widget.AppCompatButton>
+
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
