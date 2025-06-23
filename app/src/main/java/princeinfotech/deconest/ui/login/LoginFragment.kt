@@ -36,7 +36,7 @@ class LoginFragment : Fragment() {
             val password = binding.InputPassward.text.toString()
 
             if (username == "admin" && password == "123") {
-               startActivity(Intent(requireContext(),HomeMainActivity::class.java))
+                startActivity(Intent(requireContext(), HomeMainActivity::class.java))
             } else {
                 Toast.makeText(
                     requireContext(),
@@ -45,5 +45,5 @@ class LoginFragment : Fragment() {
                 ).show()
             }
         }
-    }
+        }
 }

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import princeinfotech.deconest.R
 import princeinfotech.deconest.databinding.FragmentLoginBinding
 import princeinfotech.deconest.databinding.FragmentSignUpBinding
@@ -24,9 +25,12 @@ class SignUpFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-
-
+        binding.SignupButton.setOnClickListener {
+            findNavController().navigate(R.id.LoginFragment)
+        }
+        binding.LoginButton.setOnClickListener {
+            binding.SignupButton.performClick()
+        }
     }
 
 }
