@@ -44,6 +44,8 @@ class LoginFragment : Fragment() {
                     Toast.LENGTH_SHORT
                 ).show()
             }
+
+
         }
-        }
+    }
 }
