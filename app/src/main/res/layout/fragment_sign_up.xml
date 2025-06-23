@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_primary"
-    tools:context="ui.login.LoginFragment">
+    tools:context="ui.login.SignUpFragment">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="@dimen/default_image_size_64dp"
@@ -174,6 +174,7 @@
         </androidx.appcompat.widget.AppCompatTextView>
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/LoginButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_4"
@@ -197,6 +198,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_goneMarginBottom="@dimen/margin_10"></androidx.appcompat.widget.AppCompatImageView>
+        app:layout_goneMarginBottom="@dimen/margin_10">
+
+    </androidx.appcompat.widget.AppCompatImageView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
