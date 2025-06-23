@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_login">
     </fragment>
     <fragment
-        android:id="@+id/SignUPFragment"
+        android:id="@+id/SignUpFragment"
         android:name="princeinfotech.deconest.ui.login.SignUpFragment"
         android:label="@string/SignupButton"
         tools:layout="@layout/fragment_sign_up">
