@@ -44,8 +44,9 @@ class LoginFragment : Fragment() {
                     Toast.LENGTH_SHORT
                 ).show()
             }
-
-
         }
-    }
+        binding.CreateAccount.setOnClickListener {
+            findNavController().navigate(R.id.SignUpFragment)
+        }
+        }
 }
