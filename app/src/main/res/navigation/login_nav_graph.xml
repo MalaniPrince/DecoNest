@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/LoginFragment"
         android:name="princeinfotech.deconest.ui.login.LoginFragment"
-        android:label="@string/first_fragment_label"
+        android:label="@string/home_label"
         tools:layout="@layout/fragment_login">
     </fragment>
     <fragment
