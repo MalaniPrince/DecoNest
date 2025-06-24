@@ -45,7 +45,7 @@ class LoginFragment : Fragment() {
                 ).show()
             }
         }
-        binding.CreateAccount.setOnClickListener {
+        binding.SignUpButton.setOnClickListener {
             findNavController().navigate(R.id.SignUpFragment)
         }
         }
