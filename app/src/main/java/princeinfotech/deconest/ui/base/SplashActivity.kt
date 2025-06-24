@@ -7,6 +7,8 @@ import android.os.Looper
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import princeinfotech.deconest.R
+import princeinfotech.deconest.ui.home.HomeMainActivity
+import princeinfotech.deconest.ui.utils.PreferenceHelper
 
 
 class SplashActivity : AppCompatActivity() {
@@ -15,7 +17,12 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this,onBoardingActivity::class.java) )
+           if( PreferenceHelper.isUserLoggedIn(this)){
+               startActivity(Intent(this,HomeMainActivity::class.java))
+           }else {
+
+               startActivity(Intent(this, onBoardingActivity::class.java))
+           }
             finish()
         },2000)
     }
