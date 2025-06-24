@@ -2,6 +2,7 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="width_8">8dp</dimen>
 
+    <dimen name="margin_510">510dp</dimen>
     <dimen name="margin_96">96dp</dimen>
     <dimen name="margin_72">72</dimen>
     <dimen name="margin_67">67dp</dimen>

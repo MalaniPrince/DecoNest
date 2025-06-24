@@ -10,15 +10,13 @@ import princeinfotech.deconest.R
 
 
 class SplashActivity : AppCompatActivity() {
-    private val splashTime: Long = 2000
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_splash)
+
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this@SplashActivity, onBoardingActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this,onBoardingActivity::class.java) )
             finish()
-        }, splashTime)
+        },2000)
     }
 }

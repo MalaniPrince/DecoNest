@@ -9,8 +9,6 @@
 
     tools:context=".ui.login.LoginFragment">
 
-
-
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,12 +23,10 @@
     </androidx.appcompat.widget.AppCompatTextView>
 
     <androidx.appcompat.widget.AppCompatTextView
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/Secondtitle"
         app:layout_constraintTop_toBottomOf="@+id/TopTitle"
-
         android:layout_marginTop="@dimen/margin_14"
         android:text="@string/CountinueDesinging"
         android:textColor="@color/color_black"
@@ -41,28 +37,27 @@
         android:textAlignment="center">
 
     </androidx.appcompat.widget.AppCompatTextView>
-
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/sofaImage"
         android:layout_width="@dimen/default_image_size_409dp"
         android:layout_height="@dimen/default_image_size_262dp"
         android:scaleType="centerCrop"
         android:src="@drawable/onboardinglogo"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/margin_24"
+        android:layout_marginHorizontal="@dimen/margin_4"
         app:layout_constraintTop_toBottomOf="@+id/Secondtitle"
-        android:layout_marginTop="@dimen/margin_24">
-
-    </androidx.appcompat.widget.AppCompatImageView>
-
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/InputEmail"
+        android:textColorHint="@color/color_black"
+        android:backgroundTint="@color/color_black"
         android:textColor="@color/color_black"
         android:hint="@string/Email"
-        android:textColorHint="@color/color_black"
+
         android:layout_marginStart="@dimen/margin_40"
         android:layout_marginEnd="@dimen/margin_40"
         app:layout_constraintTop_toBottomOf="@+id/sofaImage"
@@ -78,8 +73,9 @@
         android:id="@+id/InputPassward"
 
         android:hint="@string/Password"
-        android:textColor="@color/color_black"
         android:textColorHint="@color/color_black"
+        android:backgroundTint="@color/color_black"
+        android:textColor="@color/color_black"
         android:layout_marginStart="@dimen/margin_40"
         android:layout_marginEnd="@dimen/margin_40"
         app:layout_constraintTop_toBottomOf="@+id/InputEmail"
@@ -114,20 +110,9 @@
         android:textSize="@dimen/font_16"
         android:textAlignment="center"
         android:textColor="@color/color_black"
-        android:layout_marginHorizontal="120dp"
+        android:layout_marginStart="@dimen/margin_40"
+        android:layout_marginEnd="@dimen/margin_40"
         app:layout_constraintTop_toBottomOf="@+id/LoginButton">
-
     </androidx.appcompat.widget.AppCompatTextView>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/Sign_up_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_14"
-        android:text="@string/Sign_up"
-        android:textSize="@dimen/font_16"
-        app:layout_constraintStart_toEndOf="@+id/CreateAccount"
-        app:layout_constraintTop_toBottomOf="@+id/LoginButton" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

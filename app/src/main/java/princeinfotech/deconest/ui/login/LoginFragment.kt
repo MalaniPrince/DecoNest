@@ -9,8 +9,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import princeinfotech.deconest.R
+
+
 import princeinfotech.deconest.databinding.FragmentLoginBinding
-import princeinfotech.deconest.ui.base.onBoardingActivity
+
 import princeinfotech.deconest.ui.home.HomeMainActivity
 
 
@@ -21,7 +23,7 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentLoginBinding.inflate(layoutInflater)
+        binding = FragmentLoginBinding.inflate(inflater)
         return binding.root
 
     }
@@ -45,8 +47,10 @@ class LoginFragment : Fragment() {
                 ).show()
             }
         }
-        binding.SignUpButton.setOnClickListener {
+
+        binding.CreateAccount.setOnClickListener{
             findNavController().navigate(R.id.SignUpFragment)
         }
         }
-}
+
+    }
