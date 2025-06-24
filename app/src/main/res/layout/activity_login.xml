@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.login.LoginActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
+   <com.google.android.material.appbar.AppBarLayout
         android:layout_width="405dp"
         android:layout_height="61dp"
         android:fitsSystemWindows="true"

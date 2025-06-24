@@ -18,18 +18,18 @@ class SignUpFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = FragmentSignUpBinding.inflate(layoutInflater)
+        binding = FragmentSignUpBinding.inflate(inflater)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.SignupButton.setOnClickListener {
+       binding.SignupButton.setOnClickListener {
             findNavController().navigate(R.id.LoginFragment)
         }
-        binding.LoginButton.setOnClickListener {
-            binding.SignupButton.performClick()
+        binding.buttonLogin.setOnClickListener {
+            findNavController().navigate(R.id.LoginFragment)
         }
     }
 
