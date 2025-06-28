@@ -33,16 +33,12 @@ class SignUpFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.SignupButton.setOnClickListener {
-            val email = binding.EnterEmail.text.toString()
-            val password = binding.EnterComPassword.text.toString()
-
-            if(email =="admin" && password=="123"){
-                startActivity(Intent(requireContext(),HomeMainActivity::class.java))
-            }
-
-        }
-            binding.buttonLogin.setOnClickListener {
                 findNavController().navigate(R.id.LoginFragment)
-            }
+
+
         }
+       binding.buttonLogin.setOnClickListener{
+           findNavController().navigate(R.id.LoginFragment)
+       }
     }
+}
