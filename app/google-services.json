@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "550716683555",
+    "project_id": "deconest-fef5a",
+    "storage_bucket": "deconest-fef5a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550716683555:android:8302811b58217ccbbb4896",
+        "android_client_info": {
+          "package_name": "princeinfotech.deconest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550716683555-tvpaki7je7r9ektp9hlph90bdp4f41u0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "princeinfotech.deconest",
+            "certificate_hash": "4a655c5d291a9f27afc1956e79bdf12e8218ae5e"
+          }
+        },
+        {
+          "client_id": "550716683555-6a3kocqrp47jffh6cn4qpn5lkl6rvr5a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDr67erpiXGoZlEd39GF2vLRPn-hk5yyGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550716683555-6a3kocqrp47jffh6cn4qpn5lkl6rvr5a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
