@@ -6,8 +6,11 @@ import android.os.Handler
 import android.os.Looper
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.collection.emptyLongSet
 import princeinfotech.deconest.R
+import princeinfotech.deconest.databinding.ActivityOnBoardingBinding
 import princeinfotech.deconest.ui.home.HomeMainActivity
+import princeinfotech.deconest.ui.login.LoginActivity
 import princeinfotech.deconest.ui.utils.PreferenceHelper
 
 
@@ -17,13 +20,20 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         Handler(Looper.getMainLooper()).postDelayed({
-           if( PreferenceHelper.isUserLoggedIn(this)){
-               startActivity(Intent(this,HomeMainActivity::class.java))
-           }else {
+            if (PreferenceHelper.getOnBoardShow(this)) {
+                if (PreferenceHelper.isUserLoggedIn(this)) {
+                    startActivity(Intent(this, HomeMainActivity::class.java))
+                } else {
+                    startActivity(Intent(this, LoginActivity::class.java))
+                }
+            } else {
+                startActivity(Intent(this, onBoardingActivity::class.java))
+            }
 
-               startActivity(Intent(this, onBoardingActivity::class.java))
-           }
+            // Moved inside the lambda block
             finish()
-        },2000)
+        }, 2000)
+
     }
 }
+
