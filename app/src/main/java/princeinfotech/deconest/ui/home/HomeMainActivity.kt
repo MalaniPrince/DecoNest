@@ -3,29 +3,52 @@ package princeinfotech.deconest.ui.home
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import android.view.Menu
-import android.view.MenuItem
+
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.Recycler
 import princeinfotech.deconest.R
 import princeinfotech.deconest.databinding.*
 
 class HomeMainActivity : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
-    private lateinit var binding: ActivityMainBinding
+    // private lateinit var appBarConfiguration: AppBarConfiguration
+    //private lateinit var binding: ActivityMainBinding
 
+    lateinit var itemAdapter: ItemAdapter
+    lateinit var dataList: ArrayList<ModelClass>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    val recyclerView :RecyclerView=findViewById<RecyclerView>(R.id.recyclercontent)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        dataList=ArrayList()
+        dataList.add(ModelClass(R.drawable.image1, name = "Chair"))
+        dataList.add(ModelClass(R.drawable.image2, name = "Black Chair"))
+        dataList.add(ModelClass(R.drawable.image3, name = "sofa"))
+        dataList.add(ModelClass(R.drawable.image4, name = "Simple Chair"))
+        dataList.add(ModelClass(R.drawable.image5, name = "Sofa Chair"))
+        dataList.add(ModelClass(R.drawable.image6, name = "green color Sofa"))
+        dataList.add(ModelClass(R.drawable.image7, name = "yellow color Sofa"))
+        dataList.add(ModelClass(R.drawable.image8, name = "Long Sofa"))
+
+
+
+        itemAdapter= ItemAdapter(dataList,this)
+        recyclerView.layoutManager=LinearLayoutManager(this)
+        recyclerView.adapter=itemAdapter
+    }
+}
+        /*binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setSupportActionBar(binding.toolbar)
 
-        val navController = findNavController(R.id.nav_host_fragment_home_content_main)
+
+    }
+}
+
+        /*val navController = findNavController(R.id.nav_host_fragment_home_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
@@ -36,7 +59,7 @@ class HomeMainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+    /*override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
@@ -57,4 +80,4 @@ class HomeMainActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
     }
-}
+}*/

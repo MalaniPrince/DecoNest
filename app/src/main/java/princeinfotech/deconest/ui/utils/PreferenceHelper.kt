@@ -9,7 +9,7 @@ package princeinfotech.deconest.ui.utils
             private const val PREFS_NAME = "DecoNest"
             private const val USER_EMAIL = "UserEmail"
             private const val USER_NAME = "UserName"
-            private const val KEY_USER_AGE = "userAge"
+            private const val KEY_OnBord = "chintu"
             private const val KEY_USER_GENDER = "userGender"
             private const val KEY_PROFILE_IMAGE = "profileImage"
             private const val USER_ID = "UserID"
@@ -30,6 +30,14 @@ package princeinfotech.deconest.ui.utils
             fun setUserEmail(context: Context, email: String?) {
                 getSharedPrefs(context).edit().putString(USER_EMAIL, email).commit()
             }
+            fun getOnBoardShow(context: Context): Boolean {
+                return getSharedPrefs(context).getBoolean(KEY_OnBord,false)
+            }
+
+            fun setOnBoardShow(context: Context, onShow: Boolean) {
+                getSharedPrefs(context).edit().putBoolean(KEY_OnBord, onShow).commit()
+            }
+
 
             fun isUserLoggedIn(context: Context): Boolean {
                 val userEmail = getUserEmail(context)
