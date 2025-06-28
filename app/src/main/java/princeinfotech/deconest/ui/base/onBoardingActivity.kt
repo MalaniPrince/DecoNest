@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import princeinfotech.deconest.databinding.ActivityOnBoardingBinding
 import princeinfotech.deconest.ui.login.LoginActivity
+import princeinfotech.deconest.ui.utils.PreferenceHelper
 
 class onBoardingActivity : AppCompatActivity() {
     private lateinit var binding: ActivityOnBoardingBinding
@@ -15,6 +16,7 @@ class onBoardingActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.getstartButton.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
+            PreferenceHelper.setOnBoardShow(this,true)
         }
     }
 }

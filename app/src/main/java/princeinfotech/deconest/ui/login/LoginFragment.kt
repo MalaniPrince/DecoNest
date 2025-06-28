@@ -14,6 +14,7 @@ import princeinfotech.deconest.R
 import princeinfotech.deconest.databinding.FragmentLoginBinding
 
 import princeinfotech.deconest.ui.home.HomeMainActivity
+import princeinfotech.deconest.ui.utils.PreferenceHelper
 
 
 class LoginFragment : Fragment() {
@@ -34,10 +35,11 @@ class LoginFragment : Fragment() {
 
 
         binding.LoginButton.setOnClickListener {
-            val username = binding.InputEmail.text.toString()
+            val userEmail = binding.InputEmail.text.toString()
             val password = binding.InputPassward.text.toString()
 
-            if (username == "admin" && password == "123") {
+            if (userEmail == "admin@gmail.com" && password == "123") {
+                PreferenceHelper.setUserEmail(requireContext(),userEmail)
                 startActivity(Intent(requireContext(), HomeMainActivity::class.java))
             } else {
                 Toast.makeText(
