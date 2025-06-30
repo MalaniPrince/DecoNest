@@ -8,32 +8,30 @@
     android:background="@color/color_primary"
     tools:context=".ui.base.onBoardingActivity">
 
-<androidx.appcompat.widget.AppCompatImageView
-    android:layout_width="@dimen/default_image_size_64dp"
-    android:layout_height="@dimen/default_image_size_54dp"
-    android:src="@drawable/small_logo"
-    android:layout_marginStart="@dimen/margin_40"
-    android:layout_marginTop="@dimen/margin_36"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/default_image_size_64dp"
+        android:layout_height="@dimen/default_image_size_54dp"
+        android:layout_marginStart="@dimen/margin_40"
+        android:layout_marginTop="@dimen/margin_36"
+        android:src="@drawable/small_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</androidx.appcompat.widget.AppCompatImageView>
-
-
+    </androidx.appcompat.widget.AppCompatImageView>
 
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/Title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/Title"
+        android:layout_marginHorizontal="@dimen/margin_14"
+        android:layout_marginStart="@dimen/margin_40"
+        android:layout_marginTop="@dimen/margin_36"
         android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/color_black"
         android:textSize="@dimen/font_44"
         android:textStyle="bold"
-        android:textColor="@color/color_black"
-        android:textAlignment="center"
-        android:layout_marginStart="@dimen/margin_40"
-        android:layout_marginHorizontal="@dimen/margin_14"
-        android:layout_marginTop="@dimen/margin_36"
         app:layout_constraintTop_toTopOf="parent">
 
     </androidx.appcompat.widget.AppCompatTextView>
@@ -41,19 +39,19 @@
 
     <androidx.appcompat.widget.AppCompatTextView
 
+        android:id="@+id/PersonalizeText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/PersonalizeText"
-app:layout_constraintTop_toBottomOf="@+id/Title"
         android:layout_marginHorizontal="@dimen/default_button_32"
         android:layout_marginVertical="@dimen/default_button_32"
-        android:text="@string/Personalize"
-        android:textColor="@color/color_black"
-        android:textStyle="bold"
-        android:maxLines="2"
         android:ellipsize="end"
+        android:maxLines="2"
+        android:text="@string/Personalize"
+        android:textAlignment="center"
+        android:textColor="@color/color_black"
         android:textSize="@dimen/font_36"
-        android:textAlignment="center">
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/Title">
 
     </androidx.appcompat.widget.AppCompatTextView>
 
@@ -62,56 +60,57 @@ app:layout_constraintTop_toBottomOf="@+id/Title"
         android:layout_width="@dimen/default_image_size_409dp"
         android:layout_height="@dimen/default_image_size_310dp"
         android:src="@drawable/onboardinglogo"
-        app:layout_constraintTop_toBottomOf="@+id/PersonalizeText"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/PersonalizeText">
 
     </androidx.appcompat.widget.AppCompatImageView>
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/hometext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/hometext"
-        android:text="@string/Personalizehome"
-        android:textAlignment="center"
-        android:textSize="@dimen/font_25"
-        android:textStyle="bold"
-        android:textColor="@color/color_dark_gray"
         android:layout_marginStart="@dimen/margin_10"
         android:layout_marginTop="@dimen/margin_36"
+        android:text="@string/Personalizehome"
+        android:textAlignment="center"
+        android:textColor="@color/color_dark_gray"
+        android:textSize="@dimen/font_25"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/sofaImage">
 
     </androidx.appcompat.widget.AppCompatTextView>
-<androidx.appcompat.widget.AppCompatTextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/subbottomtitle"
-    android:text="@string/subbottomtitle"
-    android:maxLines="1"
-    app:layout_constraintTop_toBottomOf="@+id/hometext"
-    android:layout_marginTop="@dimen/margin_6"
-    android:layout_marginHorizontal="@dimen/margin_56"
-    android:textSize="@dimen/font_16"
-    android:textAlignment="center"
-    android:textColor="@color/color_dark_gray"
-    android:paddingStart="@dimen/padding_28"
-    app:layout_constraintStart_toStartOf="parent">
 
-</androidx.appcompat.widget.AppCompatTextView>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/subbottomtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_56"
+        android:layout_marginTop="@dimen/margin_6"
+        android:maxLines="1"
+        android:paddingStart="@dimen/padding_28"
+        android:text="@string/subbottomtitle"
+        android:textAlignment="center"
+        android:textColor="@color/color_dark_gray"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hometext">
+
+    </androidx.appcompat.widget.AppCompatTextView>
 
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/getstartButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/getstartButton"
-        android:text="@string/bottomText"
-        android:textStyle="bold"
-        android:textSize="@dimen/font_20"
         android:layout_marginStart="@dimen/font_25"
+        android:layout_marginTop="@dimen/margin_64"
         android:layout_marginEnd="@dimen/font_25"
         android:background="@drawable/button_rounded"
-        app:layout_constraintTop_toBottomOf="@+id/subbottomtitle"
-        android:layout_marginTop="@dimen/margin_64">
+        android:text="@string/bottomText"
+        android:textSize="@dimen/font_20"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/subbottomtitle">
 
     </androidx.appcompat.widget.AppCompatButton>
 
