@@ -17,8 +17,7 @@ class HomeMainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main) // This must have FrameLayout with id = fragment_container
 
-        // Load HomeFragment when MainActivity starts
-        //findNavController(R.id.nav_host_fragment).navigate(R.id.action_to_homeFragment)
+
 
     }
 }
