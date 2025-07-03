@@ -9,42 +9,20 @@
     import princeinfotech.deconest.databinding.FragmentFirstBinding
     import princeinfotech.deconest.ui.adpter.ItemAdapter
     import princeinfotech.deconest.ui.data.ModelClass
+    import princeinfotech.deconest.ui.utils.MasterDataUtils
 
     class HomeFragment : Fragment() {
 
         private var _binding: FragmentFirstBinding? = null
         private val binding get() = _binding!!
-
         private lateinit var itemAdapter: ItemAdapter
-        private lateinit var dataList: ArrayList<ModelClass>
-
         override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?,
         ): View {
             _binding = FragmentFirstBinding.inflate(inflater, container, false)
-
-            dataList = ArrayList()
-            dataList.add(
-                ModelClass(
-                    "https://as2.ftcdn.net/v2/jpg/00/29/79/51/1000_F_29795157_gLLeeTiFDsqno207woilLAq0jeOyOqdu.jpg",
-                    name = "Chair"
-                )
-            )
-            dataList.add(
-                ModelClass(
-                    "https://as2.ftcdn.net/v2/jpg/02/83/53/27/1000_F_283532744_Rbs039ygDyekkcCgXp7n3fwEPfB21tjJ.jpg",
-                    name = "Black Chair"
-                )
-            )
-            dataList.add(
-                ModelClass(
-                    "https://as2.ftcdn.net/v2/jpg/02/83/53/27/1000_F_283532785_Nt40tPnij5PzXTUERVRmHJPOFmjZ87ZM.jpg",
-                    name = "Sofa"
-                )
-            )
-
+            val dataList: ArrayList<ModelClass> = MasterDataUtils.MasterDataList(requireContext())
             itemAdapter = ItemAdapter(requireContext(), dataList, onClickListener = {})
 
             binding.recyclercontent.layoutManager = LinearLayoutManager(requireContext())
