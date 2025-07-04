@@ -1,13 +1,9 @@
-package princeinfotech.deconest.ui.login
+package princetechlabs.deconest.ui.login
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import princeinfotech.deconest.R
-import princeinfotech.deconest.databinding.ActivityLoginBinding
+import princetechlabs.deconest.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
 

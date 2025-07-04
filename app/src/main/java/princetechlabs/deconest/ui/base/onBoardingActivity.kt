@@ -1,12 +1,11 @@
-package princeinfotech.deconest.ui.base
+package princetechlabs.deconest.ui.base
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContentProviderCompat.requireContext
-import princeinfotech.deconest.databinding.ActivityOnBoardingBinding
-import princeinfotech.deconest.ui.login.LoginActivity
-import princeinfotech.deconest.ui.utils.PreferenceHelper
+import princetechlabs.deconest.databinding.ActivityOnBoardingBinding
+import princetechlabs.deconest.ui.login.LoginActivity
+import princetechlabs.deconest.ui.utils.PreferenceHelper
 
 class onBoardingActivity : AppCompatActivity() {
     private lateinit var binding: ActivityOnBoardingBinding

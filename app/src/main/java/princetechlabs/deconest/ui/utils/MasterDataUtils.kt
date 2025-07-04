@@ -1,7 +1,7 @@
-package princeinfotech.deconest.ui.utils
+package princetechlabs.deconest.ui.utils
 
 import android.content.Context
-import princeinfotech.deconest.ui.data.ModelClass
+import princetechlabs.deconest.ui.data.ModelClass
 import java.util.ArrayList
 
 object MasterDataUtils {

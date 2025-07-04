@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/LoginFragment"
-        android:name="princeinfotech.deconest.ui.login.LoginFragment"
+        android:name="princetechlabs.deconest.ui.login.LoginFragment"
         android:label="@string/home_label"
         tools:layout="@layout/fragment_login">
     </fragment>
     <fragment
         android:id="@+id/SignUpFragment"
-        android:name="princeinfotech.deconest.ui.login.SignUpFragment"
+        android:name="princetechlabs.deconest.ui.login.SignUpFragment"
         android:label="@string/SignupButton"
 
         tools:layout="@layout/fragment_sign_up">

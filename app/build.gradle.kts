@@ -1,14 +1,15 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.gms.google-services")
 }
 
 android {
-    namespace = "princeinfotech.deconest"
+    namespace = "princetechlabs.deconest"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "princeinfotech.deconest"
+        applicationId = "princetechlabs.deconest"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
@@ -48,10 +49,14 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.activity)
+    implementation(libs.firebase.crashlytics.buildtools)
+    implementation(libs.firebase.auth.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     annotationProcessor("com.github.bumptech.glide:compiler:4.16.0")
+    implementation(platform("com.google.firebase:firebase-bom:33.16.0"))
+    implementation("com.google.firebase:firebase-analytics")
 
 
 }

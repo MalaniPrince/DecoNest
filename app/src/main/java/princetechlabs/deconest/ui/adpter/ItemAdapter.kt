@@ -1,4 +1,4 @@
-package princeinfotech.deconest.ui.adpter
+package princetechlabs.deconest.ui.adpter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import princeinfotech.deconest.R
-import princeinfotech.deconest.databinding.ItemFileBinding
-import princeinfotech.deconest.ui.data.ModelClass
+import princetechlabs.deconest.R
+import princetechlabs.deconest.databinding.ItemFileBinding
+import princetechlabs.deconest.ui.data.ModelClass
 
 
 class ItemAdapter(

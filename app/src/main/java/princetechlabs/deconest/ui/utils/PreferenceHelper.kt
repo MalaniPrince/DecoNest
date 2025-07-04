@@ -1,4 +1,4 @@
-package princeinfotech.deconest.ui.utils
+package princetechlabs.deconest.ui.utils
 
     import android.content.Context
     import android.content.SharedPreferences
