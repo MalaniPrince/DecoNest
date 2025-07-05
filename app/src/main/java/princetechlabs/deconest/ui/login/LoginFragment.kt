@@ -48,11 +48,7 @@ class LoginFragment : Fragment() {
                             requireActivity().finish()
                         } else {
                             Log.w(TAG, "signInWithEmail:failure", task.exception)
-                            Toast.makeText(
-                                requireContext(),
-                                "Authentication failed: ${task.exception?.message}",
-                                Toast.LENGTH_SHORT
-                            ).show()
+                            CustomDialog.ShowToastMessage(requireContext(),"Authetication Failed")
                         }
                     }
             } else {
