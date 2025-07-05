@@ -2,11 +2,14 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="width_8">8dp</dimen>
 
+    <dimen name="margin_510">510dp</dimen>
     <dimen name="margin_96">96dp</dimen>
+    <dimen name="margin_72">72</dimen>
     <dimen name="margin_67">67dp</dimen>
     <dimen name="margin_64">64dp</dimen>
     <dimen name="margin_56">56dp</dimen>
     <dimen name="margin_48">48dp</dimen>
+    <dimen name="margin_42">42dp</dimen>
     <dimen name="margin_40">40dp</dimen>
     <dimen name="margin_36">36dp</dimen>
     <dimen name="margin_32">32dp</dimen>
@@ -87,6 +90,7 @@
     <dimen name="card_radius_20dp">20dp</dimen>
 
     <dimen name="font_44">44sp</dimen>
+    <dimen name="font_40">40sp</dimen>
     <dimen name="font_36">36sp</dimen>
     <dimen name="font_28">28sp</dimen>
     <dimen name="font_24">24sp</dimen>
@@ -124,5 +128,6 @@
     <dimen name="icon_direction_size_28">28dp</dimen>
     <dimen name="padding_10">10dp</dimen>
     <dimen name="padding_6">6dp</dimen>
+
 
 </resources>

@@ -1,4 +1,4 @@
-package princeinfotech.deconest
+package princetechlabs.deconest
 
 import org.junit.Test
 

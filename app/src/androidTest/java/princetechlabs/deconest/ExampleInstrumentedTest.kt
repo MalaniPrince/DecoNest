@@ -1,4 +1,4 @@
-package princeinfotech.deconest
+package princetechlabs.deconest
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
