@@ -27,5 +27,6 @@ object MasterDataUtils {
             )
         )
         return dataList
+
     }
 }

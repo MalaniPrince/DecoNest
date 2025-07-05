@@ -44,6 +44,7 @@ class ItemAdapter(
                 .placeholder(R.drawable.image1)
                 .into(binding.imageItem)
 
+
         }
     }
 }
