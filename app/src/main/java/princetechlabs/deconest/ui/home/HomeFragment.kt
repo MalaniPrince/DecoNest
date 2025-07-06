@@ -50,8 +50,8 @@
             binding.recyclercontent.layoutManager = LinearLayoutManager(requireContext())
            binding.recyclercontent.adapter = itemAdapter
             //binding.ViewPager.adapter = ImageSliderAdapter(requireContext(),dataList1)
-            val imageList = MasterDataUtils.viewPagerImage(requireContext())
-            binding.ViewPager.adapter = ImageSliderAdapter(requireContext(),imageList)
+            //val imageList = MasterDataUtils.viewPagerImage(requireContext())
+            binding.ViewPager.adapter = ImageSliderAdapter(requireContext(),dataList1)
             handler.postDelayed(runnable, delay)
             return binding.root
 
