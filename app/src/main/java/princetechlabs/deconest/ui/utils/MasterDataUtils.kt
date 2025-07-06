@@ -32,20 +32,20 @@ object MasterDataUtils {
 
     fun viewPagerImage(context: Context): ArrayList<String> {
 
-        val imageList = ArrayList<String>()
-        imageList.add(
+        val itemList = ArrayList<String>()
+        itemList.add(
                 "https://as2.ftcdn.net/v2/jpg/00/29/79/51/1000_F_29795157_gLLeeTiFDsqno207woilLAq0jeOyOqdu.jpg",
 
         )
-        imageList .add(
+        itemList .add(
                 "https://as2.ftcdn.net/v2/jpg/02/83/53/27/1000_F_283532744_Rbs039ygDyekkcCgXp7n3fwEPfB21tjJ.jpg",
 
         )
-        imageList.add(
+        itemList.add(
                 "https://as2.ftcdn.net/v2/jpg/02/83/53/27/1000_F_283532785_Nt40tPnij5PzXTUERVRmHJPOFmjZ87ZM.jpg",
 
 
         )
-        return imageList
+        return itemList
     }
 }
