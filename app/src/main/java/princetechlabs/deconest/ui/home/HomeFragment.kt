@@ -8,6 +8,7 @@
     import android.view.ViewGroup
     import androidx.fragment.app.Fragment
     import androidx.recyclerview.widget.LinearLayoutManager
+    import androidx.viewpager2.widget.ViewPager2
     import princetechlabs.deconest.databinding.FragmentFirstBinding
     import princetechlabs.deconest.ui.adpter.ImageSliderAdapter
     import princetechlabs.deconest.ui.adpter.ItemAdapter
@@ -18,8 +19,9 @@
 
         private var _binding: FragmentFirstBinding? = null
         private val binding get() = _binding!!
-        val dataList: ArrayList<ModelClass> = MasterDataUtils.MasterDataList(requireContext())
-        val dataList1: ArrayList<String> = MasterDataUtils.viewPagerImage(requireContext())
+
+        private lateinit var viewPager: ViewPager2
+        private lateinit var dataList1: ArrayList<String>
         private lateinit var itemAdapter: ItemAdapter
         private val handler = Handler(Looper.getMainLooper())
         private val delay: Long = 3000
@@ -27,9 +29,9 @@
 
         private val runnable = object : Runnable {
             override fun run() {
-                if (datalist1.isNotEmpty()) {
+                if (dataList1.isNotEmpty()) {
                     currentPage = (currentPage + 1) % dataList1.size
-                    iewPager.setCurrentItem(currentPage, true)
+                    viewPager.setCurrentItem(currentPage, true)
                     handler.postDelayed(this, delay)
                 }
             }
@@ -41,11 +43,16 @@
             container: ViewGroup?,
             savedInstanceState: Bundle?,
         ): View {
+            val dataList: ArrayList<ModelClass> = MasterDataUtils.MasterDataList(requireContext())
+            dataList1 = MasterDataUtils.viewPagerImage(requireContext())
             _binding = FragmentFirstBinding.inflate(inflater, container, false)
             itemAdapter = ItemAdapter(requireContext(), dataList, onClickListener = {})
             binding.recyclercontent.layoutManager = LinearLayoutManager(requireContext())
            binding.recyclercontent.adapter = itemAdapter
-            binding.ViewPager.adapter = ImageSliderAdapter(requireContext(),dataList1)
+            //binding.ViewPager.adapter = ImageSliderAdapter(requireContext(),dataList1)
+            val imageList = MasterDataUtils.viewPagerImage(requireContext())
+            binding.ViewPager.adapter = ImageSliderAdapter(requireContext(),imageList)
+            handler.postDelayed(runnable, delay)
             return binding.root
 
 

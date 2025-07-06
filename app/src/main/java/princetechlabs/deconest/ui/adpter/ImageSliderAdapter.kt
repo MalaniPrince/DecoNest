@@ -1,6 +1,7 @@
 package princetechlabs.deconest.ui.adpter
 
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +11,7 @@ import com.bumptech.glide.Glide
 import princetechlabs.deconest.R
 
 
-class ImageSliderAdapter(private val imageList: List<String>) :
+class ImageSliderAdapter(private val imageList: Context) :
     RecyclerView.Adapter<ImageSliderAdapter.ImageViewHolder>() {
 
     inner class ImageViewHolder(view: View) : RecyclerView.ViewHolder(view) {
