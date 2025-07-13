@@ -1,4 +1,4 @@
-package princeinfotech.deconest.ui.data
+package princetechlabs.deconest.data
 
 data class ModelClass(
     val image: String,

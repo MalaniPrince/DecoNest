@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/HomeFragment"
-        android:name="princeinfotech.deconest.ui.home.HomeFragment"
+        android:name="princetechlabs.deconest.ui.home.HomeFragment"
         android:label="@string/home_label"
         tools:layout="@layout/fragment_first"/>
 </navigation>

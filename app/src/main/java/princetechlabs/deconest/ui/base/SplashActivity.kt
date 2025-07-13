@@ -1,17 +1,14 @@
-package princeinfotech.deconest.ui.base
+package princetechlabs.deconest.ui.base
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.collection.emptyLongSet
-import princeinfotech.deconest.R
-import princeinfotech.deconest.databinding.ActivityOnBoardingBinding
-import princeinfotech.deconest.ui.home.HomeMainActivity
-import princeinfotech.deconest.ui.login.LoginActivity
-import princeinfotech.deconest.ui.utils.PreferenceHelper
+import princetechlabs.deconest.R
+import princetechlabs.deconest.ui.home.HomeMainActivity
+import princetechlabs.deconest.ui.login.LoginActivity
+import princetechlabs.deconest.ui.utils.PreferenceHelper
 
 
 class SplashActivity : AppCompatActivity() {
@@ -24,7 +21,7 @@ class SplashActivity : AppCompatActivity() {
                 if (PreferenceHelper.isUserLoggedIn(this)) {
                     startActivity(Intent(this, HomeMainActivity::class.java))
                 } else {
-                    startActivity(Intent(this, LoginActivity::class.java))
+                    startActivity(Intent(this,LoginActivity::class.java))
                 }
             } else {
                 startActivity(Intent(this, onBoardingActivity::class.java))
