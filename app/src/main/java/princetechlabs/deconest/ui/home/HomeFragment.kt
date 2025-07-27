@@ -9,13 +9,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager.widget.ViewPager
-import androidx.viewpager2.widget.ViewPager2
-import princetechlabs.deconest.databinding.FragmentFirstBinding
 import princetechlabs.deconest.ui.adpter.ImageSliderAdapter
 import princetechlabs.deconest.ui.adpter.ItemAdapter
 import princetechlabs.deconest.ui.data.ModelClass
 import princetechlabs.deconest.ui.utils.MasterDataUtils
-import princetechlabs.deconest.ui.utils.MasterDataUtils.viewPagerImage
+
 
 class HomeFragment : Fragment() {
 
