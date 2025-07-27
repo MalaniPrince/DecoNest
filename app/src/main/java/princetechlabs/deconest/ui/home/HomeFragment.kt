@@ -8,13 +8,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.viewpager.widget.ViewPager
-import androidx.viewpager2.widget.ViewPager2
 import princetechlabs.deconest.databinding.FragmentFirstBinding
 import princetechlabs.deconest.ui.adpter.ImageSliderAdapter
 import princetechlabs.deconest.ui.adpter.ItemAdapter
-import princetechlabs.deconest.ui.data.ModelClass
+import princetechlabs.deconest.ui.utils.CustomDialog
 import princetechlabs.deconest.ui.utils.MasterDataUtils
+import princetechlabs.deconest.ui.utils.MasterDataUtils.ArrayListDemo
 import princetechlabs.deconest.ui.utils.MasterDataUtils.viewPagerImage
 
 class HomeFragment : Fragment() {
@@ -23,10 +22,6 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var itemAdapter: ItemAdapter
     private lateinit var imageSliderAdapter: ImageSliderAdapter
-    private lateinit var itemList: ArrayList<ModelClass>
-
-    private lateinit var viewPager: ViewPager
-
     private var currentPage = 0
     private val handler = Handler(Looper.getMainLooper())
     private val delay: Long = 3000 // 3 seconds
@@ -47,6 +42,7 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentFirstBinding.inflate(inflater, container, false)
         return binding.root
+
 
 
     }
@@ -73,6 +69,11 @@ class HomeFragment : Fragment() {
 
         binding.recyclerView.adapter = itemAdapter
         binding.viewPager.adapter = imageSliderAdapter
+
+        CustomDialog.ShowToastMessage(requireContext(), MasterDataUtils.ArrayListDemo(requireContext(),
+            viewPagerImage(requireContext())).toString())
+
+
 
     }
 
