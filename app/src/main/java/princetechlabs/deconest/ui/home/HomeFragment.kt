@@ -9,13 +9,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager.widget.ViewPager
-import androidx.viewpager2.widget.ViewPager2
 import princetechlabs.deconest.databinding.FragmentFirstBinding
 import princetechlabs.deconest.ui.adpter.ImageSliderAdapter
 import princetechlabs.deconest.ui.adpter.ItemAdapter
 import princetechlabs.deconest.ui.data.ModelClass
+import princetechlabs.deconest.ui.utils.CustomDialog
 import princetechlabs.deconest.ui.utils.MasterDataUtils
-import princetechlabs.deconest.ui.utils.MasterDataUtils.viewPagerImage
 
 class HomeFragment : Fragment() {
 
@@ -36,6 +35,16 @@ class HomeFragment : Fragment() {
             currentPage = (currentPage + 1) % totalItems
             binding.viewPager.setCurrentItem(currentPage, true)
             handler.postDelayed(this, delay)
+
+
+            var item = ArrayList<String>()
+            item.add("chintan")
+            item.add("vedant")
+
+
+
+            var itemList = MasterDataUtils.method(requireContext(),item)
+            CustomDialog.ShowToastMessage(requireContext(),itemList.toString())
         }
     }
 
@@ -66,7 +75,7 @@ class HomeFragment : Fragment() {
                 })
 
         imageSliderAdapter = ImageSliderAdapter(
-            requireContext(),MasterDataUtils.viewPagerImage(requireContext())
+            requireContext(), MasterDataUtils.viewPagerImage()
         )
 
 
@@ -92,4 +101,11 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 
+
+
 }
+
+
+
+
+
