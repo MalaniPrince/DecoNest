@@ -51,9 +51,12 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val recyclerView = binding.recyclerView
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
+        recyclerView.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
 
+        val recyclerView2 = binding.recyclerView2
+
+        recyclerView2.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
         itemAdapter =
             ItemAdapter(
                 requireContext(),
@@ -68,6 +71,7 @@ class HomeFragment : Fragment() {
 
 
         binding.recyclerView.adapter = itemAdapter
+        binding.recyclerView2.adapter = itemAdapter
         binding.viewPager.adapter = imageSliderAdapter
 
         CustomDialog.ShowToastMessage(requireContext(), MasterDataUtils.ArrayListDemo(requireContext(),
