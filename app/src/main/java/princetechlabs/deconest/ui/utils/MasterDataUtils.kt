@@ -50,14 +50,4 @@ object MasterDataUtils {
         )
         return itemList
     }
-
-    fun ArrayListDemo(context: Context , array1 : ArrayList<String>): Int {
-
-
-        return array1.size
-
-    }
-
-
-
 }

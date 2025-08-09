@@ -13,7 +13,7 @@ import princetechlabs.deconest.ui.adpter.ImageSliderAdapter
 import princetechlabs.deconest.ui.adpter.ItemAdapter
 import princetechlabs.deconest.ui.utils.CustomDialog
 import princetechlabs.deconest.ui.utils.MasterDataUtils
-import princetechlabs.deconest.ui.utils.MasterDataUtils.ArrayListDemo
+
 import princetechlabs.deconest.ui.utils.MasterDataUtils.viewPagerImage
 
 class HomeFragment : Fragment() {
@@ -73,9 +73,6 @@ class HomeFragment : Fragment() {
         binding.recyclerView.adapter = itemAdapter
         binding.recyclerView2.adapter = itemAdapter
         binding.viewPager.adapter = imageSliderAdapter
-
-        CustomDialog.ShowToastMessage(requireContext(), MasterDataUtils.ArrayListDemo(requireContext(),
-            viewPagerImage(requireContext())).toString())
 
 
 
