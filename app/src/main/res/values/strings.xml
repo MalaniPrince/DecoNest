@@ -18,6 +18,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="createAccount">Create Your Deconest Account</string>
     <string name="Name">Name\n</string>
+    <string name="webClient">817643624565-gcjputat2v3bhea1ndr4ki6bnir5ed2l.apps.googleusercontent.com</string>
     <string name="Email">Email Address</string>
     <string name="Password">Password</string>
     <string name="ComPassword">Confirm Password</string>
