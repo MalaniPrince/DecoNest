@@ -8,13 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import princetechlabs.deconest.R
 import princetechlabs.deconest.databinding.FragmentFirstBinding
 import princetechlabs.deconest.ui.adpter.ImageSliderAdapter
 import princetechlabs.deconest.ui.adpter.ItemAdapter
 import princetechlabs.deconest.ui.utils.CustomDialog
 import princetechlabs.deconest.ui.utils.MasterDataUtils
 
-import princetechlabs.deconest.ui.utils.MasterDataUtils.viewPagerImage
 
 class HomeFragment : Fragment() {
 
@@ -24,7 +24,7 @@ class HomeFragment : Fragment() {
     private lateinit var imageSliderAdapter: ImageSliderAdapter
     private var currentPage = 0
     private val handler = Handler(Looper.getMainLooper())
-    private val delay: Long = 3000 // 3 seconds
+    private val delay: Long = 3000
     private val runnable: Runnable = object : Runnable {
         override fun run() {
             val totalItems = imageSliderAdapter.count
@@ -73,6 +73,7 @@ class HomeFragment : Fragment() {
         binding.recyclerView.adapter = itemAdapter
         binding.recyclerView2.adapter = itemAdapter
         binding.viewPager.adapter = imageSliderAdapter
+
 
 
 
