@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import princetechlabs.deconest.R
 import princetechlabs.deconest.databinding.FragmentSignUpBinding
+import princetechlabs.deconest.ui.utils.CustomDialog
 
 class SignUpFragment : Fragment() {
     private lateinit var binding: FragmentSignUpBinding
@@ -41,19 +42,11 @@ class SignUpFragment : Fragment() {
                             findNavController().navigate(R.id.LoginFragment)
                         } else {
                             Log.w("SignUpFragment", "createUserWithEmail:failure", task.exception)
-                            Toast.makeText(
-                                requireContext(),
-                                "Authentication failed.",
-                                Toast.LENGTH_SHORT
-                            ).show()
+                            CustomDialog.ShowToastMessage(requireContext(),"Authentication failed.")
                         }
                     }
             } else {
-                Toast.makeText(
-                    requireContext(),
-                    "Please enter email and password",
-                    Toast.LENGTH_SHORT
-                ).show()
+                CustomDialog.ShowToastMessage(requireContext(),"Please enter email and password")
             }
         }
 

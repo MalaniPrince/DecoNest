@@ -2,7 +2,7 @@ package princetechlabs.deconest.ui.utils
 
 import android.content.Context
 import princetechlabs.deconest.ui.data.ModelClass
-import java.util.ArrayList
+import kotlin.collections.ArrayList
 
 object MasterDataUtils {
     fun MasterDataList(context: Context): ArrayList<ModelClass> {
@@ -20,12 +20,14 @@ object MasterDataUtils {
                 name = "Black Chair"
             )
         )
+
         dataList.add(
             ModelClass(
-                "https://as2.ftcdn.net/v2/jpg/02/83/53/27/1000_F_283532785_Nt40tPnij5PzXTUERVRmHJPOFmjZ87ZM.jpg",
-                name = "Sofa"
+                "https://as2.ftcdn.net/v2/jpg/02/83/53/27/1000_F_283532744_Rbs039ygDyekkcCgXp7n3fwEPfB21tjJ.jpg",
+                name = "Black Chair"
             )
         )
+
         return dataList
 
     }

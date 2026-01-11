@@ -16,9 +16,6 @@ class ItemAdapter(
     private val onClickListener: OnClickListener
 ) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
-    companion object {
-        const val CLICK_TYPE_ITEM = 1
-    }
 
     class OnClickListener(val clickListener: (itemData: ModelClass, clickType: Int) -> Unit) {
         fun onClick(itemData: ModelClass, clickType: Int) = clickListener(itemData, clickType)
@@ -47,9 +44,6 @@ class ItemAdapter(
                 .placeholder(R.drawable.image1)
                 .into(binding.imageItem)
 
-            binding.root.setOnClickListener {
-                onClickListener.onClick(dataModal, CLICK_TYPE_ITEM)
-            }
         }
     }
 }

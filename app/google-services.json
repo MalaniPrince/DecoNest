@@ -12,7 +12,20 @@
           "package_name": "princetechlabs.deconest"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "817643624565-ufrji1jpapfagp06l0p1u40irj7qkhki.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "princetechlabs.deconest",
+            "certificate_hash": "4a655c5d291a9f27afc1956e79bdf12e8218ae5e"
+          }
+        },
+        {
+          "client_id": "817643624565-gcjputat2v3bhea1ndr4ki6bnir5ed2l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBqK2brj6LGJ3T3U42TMI-be2_U2E8K26o"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "817643624565-draj9f243r22reao8qcm8mhrra0eliol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

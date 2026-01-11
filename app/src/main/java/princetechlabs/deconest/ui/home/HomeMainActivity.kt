@@ -1,14 +1,20 @@
 package princetechlabs.deconest.ui.home
+
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupWithNavController
 import princetechlabs.deconest.R
 import princetechlabs.deconest.databinding.ActivityMainBinding
+import princetechlabs.deconest.ui.BottomNavigation.AccountFragment
+import princetechlabs.deconest.ui.BottomNavigation.CartFragment
+import princetechlabs.deconest.ui.BottomNavigation.CategoryFragment
 
 class HomeMainActivity : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,13 +23,12 @@ class HomeMainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
+                    as NavHostFragment
 
+        val navController = navHostFragment.navController
 
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null)
-                .setAnchorView(R.id.fab).show()
-        }
+        binding.bottomNavigationView.setupWithNavController(navController)
     }
-
 }

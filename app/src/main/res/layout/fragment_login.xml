@@ -13,41 +13,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/TopTitle"
-        android:text="@string/WelcomeBack"
-        android:textSize="@dimen/font_44"
+        android:text="@string/createAccount"
+        android:textSize="@dimen/font_36"
         android:textStyle="bold"
+        android:maxLines="2"
+        android:ellipsize="end"
         android:textColor="@color/color_black"
         android:textAlignment="center"
-        android:layout_marginTop="@dimen/margin_32"
+        android:layout_marginTop="@dimen/margin_40"
         app:layout_constraintTop_toTopOf="parent">
     </androidx.appcompat.widget.AppCompatTextView>
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/Secondtitle"
-        app:layout_constraintTop_toBottomOf="@+id/TopTitle"
-        android:layout_marginTop="@dimen/margin_14"
-        android:text="@string/CountinueDesinging"
-        android:textColor="@color/color_black"
-        android:textStyle=""
-        android:maxLines="1"
-        android:ellipsize="end"
-        android:textSize="@dimen/font_20"
-        android:textAlignment="center">
 
-    </androidx.appcompat.widget.AppCompatTextView>
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/sofaImage"
-        android:layout_width="@dimen/default_image_size_409dp"
-        android:layout_height="@dimen/default_image_size_262dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/onboardinglogo"
-        android:layout_marginTop="@dimen/margin_24"
-        android:layout_marginHorizontal="@dimen/margin_4"
-        app:layout_constraintTop_toBottomOf="@+id/Secondtitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:layout_width="match_parent"
@@ -60,7 +37,7 @@
 
         android:layout_marginStart="@dimen/margin_40"
         android:layout_marginEnd="@dimen/margin_40"
-        app:layout_constraintTop_toBottomOf="@+id/sofaImage"
+        app:layout_constraintTop_toBottomOf="@+id/TopTitle"
         android:inputType="textEmailAddress"
         android:maxLines="1"
         android:ellipsize="end"
@@ -100,6 +77,33 @@
         app:layout_constraintTop_toBottomOf="@+id/InputPassward">
 
     </androidx.appcompat.widget.AppCompatButton>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ortext"
+        android:text="@string/ortxt"
+        android:layout_marginTop="@dimen/margin_14"
+        android:textSize="@dimen/font_16"
+        android:textAlignment="center"
+        android:textColor="@color/color_black"
+        android:layout_marginStart="@dimen/margin_40"
+        android:layout_marginEnd="@dimen/margin_40"
+        app:layout_constraintTop_toBottomOf="@+id/LoginButton">
+    </androidx.appcompat.widget.AppCompatTextView>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonContinueWithGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/font_40"
+        android:layout_marginTop="@dimen/margin_20"
+        android:layout_marginEnd="@dimen/font_40"
+        android:background="@drawable/button_rounded"
+
+        android:text="@string/Signinwithgoogle"
+        android:textSize="@dimen/font_20"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/ortext"
+        />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="match_parent"
@@ -112,7 +116,7 @@
         android:textColor="@color/color_black"
         android:layout_marginStart="@dimen/margin_40"
         android:layout_marginEnd="@dimen/margin_40"
-        app:layout_constraintTop_toBottomOf="@+id/LoginButton">
+        app:layout_constraintTop_toBottomOf="@+id/buttonContinueWithGoogle">
     </androidx.appcompat.widget.AppCompatTextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
