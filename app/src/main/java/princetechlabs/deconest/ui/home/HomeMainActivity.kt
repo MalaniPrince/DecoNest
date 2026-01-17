@@ -23,12 +23,22 @@ class HomeMainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.nav_host_fragment)
-                    as NavHostFragment
+        loadFragment(HomeFragment())
 
-        val navController = navHostFragment.navController
+        binding.bottomNavigationView.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.HomeFragment -> loadFragment(HomeFragment())
+                R.id.AccountFragment -> loadFragment(AccountFragment())
+                R.id.CartFragment -> loadFragment(CartFragment())
+                R.id.CategoryFragment -> loadFragment(CategoryFragment())
+            }
+            true
+        }
+    }
 
-        binding.bottomNavigationView.setupWithNavController(navController)
+    private fun loadFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragmentContainer, fragment)
+            .commit()
     }
 }

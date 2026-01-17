@@ -8,19 +8,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.login.LoginActivity">
 
-   <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="405dp"
-        android:layout_height="61dp"
-        android:fitsSystemWindows="true"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize" />
-    </com.google.android.material.appbar.AppBarLayout>
-
     <include layout="@layout/login_content_main" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
