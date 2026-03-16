@@ -1,5 +1,7 @@
 package princetechlabs.deconest.ui.adpter
 
+import android.graphics.Color
+import android.graphics.PorterDuff
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -10,31 +12,24 @@ class ProfileAdapter(
     private val list: List<ProfileItem>
 ) : RecyclerView.Adapter<ProfileAdapter.ProfileViewHolder>() {
 
-    inner class ProfileViewHolder(
-        val binding: ItemProfileOptionBinding
-    ) : RecyclerView.ViewHolder(binding.root)
+    inner class ProfileViewHolder(val binding: ItemProfileOptionBinding) :
+        RecyclerView.ViewHolder(binding.root)
 
-    override fun onCreateViewHolder(
-        parent: ViewGroup,
-        viewType: Int
-    ): ProfileViewHolder {
-
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProfileViewHolder {
         val binding = ItemProfileOptionBinding.inflate(
-            LayoutInflater.from(parent.context),
-            parent,
-            false
+            LayoutInflater.from(parent.context), parent, false
         )
         return ProfileViewHolder(binding)
     }
 
-    override fun onBindViewHolder(
-        holder: ProfileViewHolder,
-        position: Int
-    ) {
+    override fun onBindViewHolder(holder: ProfileViewHolder, position: Int) {
         val item = list[position]
         holder.binding.icon.setImageResource(item.icon)
         holder.binding.title.text = item.title
         holder.binding.subtitle.text = item.subtitle
+        holder.binding.iconBgLayout.background.setColorFilter(
+            Color.parseColor(item.bgColor), PorterDuff.Mode.SRC_IN
+        )
     }
 
     override fun getItemCount(): Int = list.size

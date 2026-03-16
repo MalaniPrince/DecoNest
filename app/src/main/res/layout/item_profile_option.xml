@@ -1,32 +1,54 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="140dp"
-    android:background="@android:color/white"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="12dp"
-    android:layout_margin="6dp">
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="3dp"
+    app:cardBackgroundColor="#FFFFFF">
 
-    <ImageView
-        android:id="@+id/icon"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        app:tint="#000" />
-
-    <TextView
-        android:id="@+id/title"
-        android:layout_marginTop="10dp"
-        android:textStyle="bold"
-        android:textSize="14sp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"/>
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/subtitle"
-        android:textSize="12sp"
-        android:textColor="#777"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:gravity="center"/>
-</LinearLayout>
+        <LinearLayout
+            android:id="@+id/iconBgLayout"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:gravity="center"
+            android:background="@drawable/nav_item_active_bg">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="26dp"
+                android:layout_height="26dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:textColor="#212121"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textSize="11sp"
+            android:textColor="#9E9E9E"
+            android:gravity="center"
+            android:maxLines="2" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

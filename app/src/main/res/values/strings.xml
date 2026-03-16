@@ -37,4 +37,14 @@
     <string name="_8849193469">8849193469</string>
     <string name="prince_patel">prince patel</string>
     <string name="xyz_gmailcom">xyz@gmailcom</string>
+    <string name="proceed_to_checkout">Proceed to Checkout</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="deconest">DecoNest</string>
+    <string name="priyanshu">Priyanshu</string>
+    <string name="my_profile">My Profile →</string>
+    <string name="my_orders">My Orders</string>
+    <string name="my_wallet">My Wallet</string>
+    <string name="browse_all_categories">Browse All Categories</string>
+    <string name="app_version_1_0_0">App Version 1.0.0</string>
+    <string name="logout">Logout</string>
 </resources>
