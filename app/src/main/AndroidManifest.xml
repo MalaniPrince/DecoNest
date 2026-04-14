@@ -38,8 +38,43 @@
             android:name=".ui.home.HomeMainActivity"
             android:exported="true"
             android:theme="@style/Theme.DecoNest">
-
         </activity>
+        <activity
+            android:name=".ui.home.ProductDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.CheckoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.OrderSuccessActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.OrderTrackingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.OrderDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.WalletActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.NotificationsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.AddressManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.CouponsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.ReviewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.InfoActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

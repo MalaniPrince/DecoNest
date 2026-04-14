@@ -3,7 +3,7 @@
     <color name="color_black">#FF000000</color>
     <color name="color_white">#FFFFFFFF</color>
     <color name="color_primary">#F4EBDB</color>
-    <color name="color_dark_gray">#212121 </color>
+    <color name="color_dark_gray">#212121</color>
     <color name="color_light_gold">#EEDD82</color>
     <color name="color_orange">#F44336</color>
     <color name="color_teal">#00897B</color>
@@ -11,4 +11,13 @@
     <color name="color_divider">#E0E0E0</color>
     <color name="color_tab_active">#E67E22</color>
     <color name="color_gray_text">#888888</color>
+    <color name="color_accent">#EEDD82</color>
+    <color name="color_text_primary">#212121</color>
+    <color name="color_text_secondary">#888888</color>
+    <color name="color_success">#4CAF50</color>
+    <color name="color_error">#E53935</color>
+    <color name="color_nav_start">#FFFFFFFF</color>
+    <color name="color_nav_end">#F4EBDB</color>
+    <color name="color_card_start">#FFFFFFFF</color>
+    <color name="color_card_end">#F4EBDB</color>
 </resources>

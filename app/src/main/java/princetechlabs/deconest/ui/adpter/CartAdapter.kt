@@ -2,11 +2,13 @@ package princetechlabs.deconest.ui.adpter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import princetechlabs.deconest.R
 import princetechlabs.deconest.databinding.ItemCartProductBinding
 import princetechlabs.deconest.ui.data.CartItem
+import princetechlabs.deconest.ui.utils.CartRepository
 
 class CartAdapter(
     private val cartItems: MutableList<CartItem>,
@@ -37,28 +39,40 @@ class CartAdapter(
             .into(holder.binding.ivCartProduct)
 
         holder.binding.btnIncrease.setOnClickListener {
+            val anim = AnimationUtils.loadAnimation(it.context, R.anim.pop_in)
+            holder.binding.tvQuantity.startAnimation(anim)
             item.quantity++
             holder.binding.tvQuantity.text = item.quantity.toString()
             holder.binding.tvCartProductPrice.text = "₹${String.format("%,d", item.price * item.quantity)}"
+            CartRepository.notifyListeners()
             onCartChanged()
         }
 
         holder.binding.btnDecrease.setOnClickListener {
             if (item.quantity > 1) {
+                val anim = AnimationUtils.loadAnimation(it.context, R.anim.pop_in)
+                holder.binding.tvQuantity.startAnimation(anim)
                 item.quantity--
                 holder.binding.tvQuantity.text = item.quantity.toString()
                 holder.binding.tvCartProductPrice.text = "₹${String.format("%,d", item.price * item.quantity)}"
+                CartRepository.notifyListeners()
                 onCartChanged()
             }
         }
 
         holder.binding.btnRemoveCart.setOnClickListener {
-            val pos = holder.adapterPosition
-            if (pos != RecyclerView.NO_ID.toInt() && pos < cartItems.size) {
-                cartItems.removeAt(pos)
-                notifyItemRemoved(pos)
-                onCartChanged()
-            }
+            val anim = AnimationUtils.loadAnimation(it.context, R.anim.slide_out_right)
+            holder.binding.root.startAnimation(anim)
+            holder.binding.root.postDelayed({
+                val pos = holder.adapterPosition
+                if (pos != RecyclerView.NO_POSITION && pos < cartItems.size) {
+                    cartItems.removeAt(pos)
+                    notifyItemRemoved(pos)
+                    notifyItemRangeChanged(pos, cartItems.size)
+                    CartRepository.notifyListeners()
+                    onCartChanged()
+                }
+            }, 200)
         }
     }
 

@@ -13,12 +13,67 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/ivProduct"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/image1" />
+            android:layout_height="160dp">
+
+            <ImageView
+                android:id="@+id/ivProduct"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/image1" />
+
+            <!-- Discount badge (top-left) -->
+            <TextView
+                android:id="@+id/tvDiscountBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_gravity="top|start"
+                android:background="@drawable/bg_gradient_accent"
+                android:paddingStart="7dp"
+                android:paddingEnd="7dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:text="25% OFF"
+                android:visibility="visible" />
+
+            <!-- Wishlist heart button (top-right) -->
+            <ImageView
+                android:id="@+id/btnCardWishlist"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="top|end"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_wishlist" />
+
+            <!-- "New" / "Hot" label badge (bottom-left) -->
+            <TextView
+                android:id="@+id/tvProductBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|start"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_gradient_button"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:text="HOT"
+                android:visibility="gone" />
+
+        </FrameLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,15 +101,57 @@
                 android:textColor="#9E9E9E"
                 android:layout_marginTop="2dp" />
 
-            <TextView
-                android:id="@+id/tvProductPrice"
+            <RatingBar
+                android:id="@+id/ratingBarProduct"
+                style="?android:attr/ratingBarStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="₹12,999"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:textColor="#E67E22"
-                android:layout_marginTop="6dp" />
+                android:layout_marginTop="4dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:rating="4.0"
+                android:progressTint="@color/color_tab_active"
+                android:secondaryProgressTint="@color/color_divider" />
+
+            <!-- MRP crossed out -->
+            <TextView
+                android:id="@+id/tvProductMrp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹16,999"
+                android:textSize="11sp"
+                android:textColor="#BDBDBD"
+                android:layout_marginTop="3dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="2dp">
+
+                <TextView
+                    android:id="@+id/tvProductPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="₹12,999"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#E67E22" />
+
+                <ImageView
+                    android:id="@+id/btnCardAddToCart"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bg_gradient_accent"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_nav_cart"
+                    android:tint="@color/color_white" />
+
+            </LinearLayout>
 
         </LinearLayout>
 

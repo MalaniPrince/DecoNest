@@ -1,199 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefresh"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8F8F8"
     tools:context=".ui.home.HomeFragment">
 
-    <LinearLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/tvOfferBanner"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:background="@color/color_teal"
-            android:text="Extra 15% Off on All Home and Decor Orders*"
-            android:textColor="@color/color_white"
-            android:textSize="13sp"
-            android:fontFamily="sans-serif-medium"
-            android:gravity="center" />
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/color_white"
-            android:orientation="vertical"
-            android:elevation="2dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginStart="14dp"
-                android:layout_marginEnd="14dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginBottom="10dp"
-                android:background="@drawable/search_bg"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:paddingStart="14dp"
-                android:paddingEnd="14dp">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_search"
-                    android:layout_marginEnd="10dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Search Sofas, Beds, Tables..."
-                    android:textSize="13sp"
-                    android:textColor="@color/color_gray_text" />
-
-            </LinearLayout>
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvCategoryTabs"
-                android:layout_width="match_parent"
-                android:layout_height="46dp"
-                android:nestedScrollingEnabled="false"
-                android:paddingStart="4dp"
-                android:paddingEnd="4dp" />
-
-        </LinearLayout>
-
-        <!-- Shop by Category Section -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/color_white"
-            android:orientation="vertical"
-            android:layout_marginTop="8dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingTop="14dp"
-                android:paddingBottom="10dp"
-                android:gravity="center_vertical">
-
-                <View
-                    android:layout_width="4dp"
-                    android:layout_height="20dp"
-                    android:background="@color/color_tab_active"
-                    android:layout_marginEnd="8dp" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Shop by Category"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/color_dark_gray" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="See All"
-                    android:textSize="12sp"
-                    android:textColor="@color/color_tab_active"
-                    android:padding="4dp" />
-
-            </LinearLayout>
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvCategoryGrid"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
-                android:paddingBottom="14dp"
-                android:nestedScrollingEnabled="false"
-                android:clipToPadding="false" />
-
-        </LinearLayout>
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewPager"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="8dp" />
-        <LinearLayout
-            android:id="@+id/layoutFilterSection"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/color_white"
-            android:orientation="vertical"
-            android:layout_marginTop="8dp"
-            android:visibility="gone">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:paddingTop="14dp"
-                android:paddingBottom="10dp"
-                android:gravity="center_vertical">
-
-                <View
-                    android:layout_width="4dp"
-                    android:layout_height="20dp"
-                    android:background="@color/color_tab_active"
-                    android:layout_marginEnd="8dp" />
-
-                <TextView
-                    android:id="@+id/tvFilterTitle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Furniture"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/color_dark_gray" />
-
-                <TextView
-                    android:id="@+id/tvFilterCount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0 items"
-                    android:textSize="12sp"
-                    android:textColor="@color/color_gray_text" />
-
-            </LinearLayout>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvFilteredProducts"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:nestedScrollingEnabled="false"
-                android:clipToPadding="false"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
-                android:paddingBottom="8dp" />
-
-            <TextView
-                android:id="@+id/tvNoProducts"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:gravity="center"
-                android:text="No products found in this category"
-                android:textSize="14sp"
-                android:textColor="@color/color_gray_text"
-                android:visibility="gone" />
-
-        </LinearLayout>
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
 
         <LinearLayout
-            android:id="@+id/layoutDefaultSections"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvOfferBanner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/color_teal"
+                android:text="Extra 15% Off on All Home and Decor Orders*"
+                android:textColor="@color/color_white"
+                android:textSize="13sp"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:orientation="vertical"
+                android:elevation="2dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginEnd="14dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/search_bg"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_search"
+                        android:layout_marginEnd="10dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Search Sofas, Beds, Tables..."
+                        android:textSize="13sp"
+                        android:textColor="@color/color_gray_text" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCategoryTabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp" />
+
+            </LinearLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -214,96 +100,140 @@
                     <View
                         android:layout_width="4dp"
                         android:layout_height="20dp"
-                        android:background="#FF5722"
+                        android:background="@color/color_tab_active"
                         android:layout_marginEnd="8dp" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Trending Products"
+                        android:text="Shop by Category"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:textColor="@color/color_dark_gray" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="View All"
-                        android:textSize="12sp"
-                        android:textColor="@color/color_tab_active"
-                        android:padding="4dp" />
-
                 </LinearLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerView"
+                    android:id="@+id/rvCategoryGrid"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:nestedScrollingEnabled="false"
-                    android:clipToPadding="false"
                     android:paddingStart="8dp"
                     android:paddingEnd="8dp"
-                    android:paddingBottom="8dp" />
+                    android:paddingBottom="14dp"
+                    android:nestedScrollingEnabled="false" />
 
             </LinearLayout>
+
             <LinearLayout
+                android:id="@+id/layoutDefaultSections"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/color_white"
-                android:orientation="vertical"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp">
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:paddingTop="14dp"
-                    android:paddingBottom="10dp"
-                    android:gravity="center_vertical">
-
-                    <View
-                        android:layout_width="4dp"
-                        android:layout_height="20dp"
-                        android:background="#4CAF50"
-                        android:layout_marginEnd="8dp" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="New Arrivals"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/color_dark_gray" />
+                    android:background="@color/color_white"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="View All"
-                        android:textSize="12sp"
-                        android:textColor="@color/color_tab_active"
-                        android:padding="4dp" />
+                        android:text="@string/section_trending"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:paddingStart="16dp"
+                        android:paddingTop="14dp"
+                        android:textColor="@color/color_dark_gray" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dp" />
 
                 </LinearLayout>
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerView2"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:nestedScrollingEnabled="false"
-                    android:clipToPadding="false"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:paddingBottom="16dp" />
+                    android:background="@color/color_white"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/section_new_arrivals"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:paddingStart="16dp"
+                        android:paddingTop="14dp"
+                        android:textColor="@color/color_dark_gray" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="8dp" />
+
+                </LinearLayout>
+
+                <!-- Recently Viewed — shown only after user browses products -->
+                <LinearLayout
+                    android:id="@+id/layoutRecentlyViewed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_white"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="10dp"
+                        android:gravity="center_vertical">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="20dp"
+                            android:background="#9C27B0"
+                            android:layout_marginEnd="8dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/recently_viewed_title"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/color_dark_gray" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvRecentlyViewed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="16dp"
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="false" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
         </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
-    </LinearLayout>
-
-</androidx.core.widget.NestedScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

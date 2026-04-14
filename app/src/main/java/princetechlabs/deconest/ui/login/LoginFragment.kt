@@ -2,6 +2,7 @@ package princetechlabs.deconest.ui.login
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -49,27 +50,28 @@ class LoginFragment : Fragment() {
         auth = Firebase.auth
 
         binding.LoginButton.setOnClickListener {
-            val email = binding.InputEmail.text.toString()
-            val pass = binding.InputPassward.text.toString()
+            val email = binding.InputEmail.text.toString().trim()
+            val pass = binding.InputPassward.text.toString().trim()
 
-            if (email.isNotEmpty() && pass.isNotEmpty()) {
-                firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
-                    if (it.isSuccessful) {
-                        startActivity(Intent(requireContext(), HomeMainActivity::class.java))
-                        requireActivity().finish()
-                        PreferenceHelper.setUserEmail(requireContext(), email)
-                    } else {
-                        Toast.makeText(
-                            requireContext(),
-                            it.exception.toString(),
-                            Toast.LENGTH_SHORT
-                        ).show()
-
-                    }
-                }
-            } else {
+            if (email.isEmpty() || pass.isEmpty()) {
                 CustomDialog.ShowToastMessage(requireContext(), "Empty fields are not allowed")
+                return@setOnClickListener
+            }
 
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                CustomDialog.ShowToastMessage(requireContext(), "Please enter a valid email address")
+                return@setOnClickListener
+            }
+
+            firebaseAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener {
+                if (it.isSuccessful) {
+                    PreferenceHelper.setUserEmail(requireContext(), email)
+                    startActivity(Intent(requireContext(), HomeMainActivity::class.java))
+                    requireActivity().finish()
+                } else {
+                    val errorMsg = it.exception?.message ?: "Login failed. Please try again."
+                    CustomDialog.ShowToastMessage(requireContext(), errorMsg)
+                }
             }
         }
 
@@ -93,6 +95,10 @@ class LoginFragment : Fragment() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == RC_SIGN_IN) {
+            if (data == null) {
+                CustomDialog.ShowToastMessage(requireActivity(), "Google Sign-In was cancelled")
+                return
+            }
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
             handleSignInResult(task)
         }
@@ -115,6 +121,7 @@ class LoginFragment : Fragment() {
                     CustomDialog.ShowToastMessage(requireActivity(), "Login Successful")
                     PreferenceHelper.setUserEmail(requireContext(), account.email)
                     startActivity(Intent(requireActivity(), HomeMainActivity::class.java))
+                    requireActivity().finish()
                 } else {
                     CustomDialog.ShowToastMessage(requireActivity(), "Login Failed")
                 }

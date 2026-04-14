@@ -16,7 +16,7 @@
         android:orientation="horizontal"
         android:padding="12dp">
 
-        <!-- Product Image -->
+        
         <ImageView
             android:id="@+id/ivCartProduct"
             android:layout_width="90dp"
@@ -24,7 +24,7 @@
             android:scaleType="centerCrop"
             android:src="@drawable/image1" />
 
-        <!-- Product Details -->
+        
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
                 android:textColor="#E67E22"
                 android:layout_marginTop="6dp" />
 
-            <!-- Quantity Controls -->
+            
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
 
         </LinearLayout>
 
-        <!-- Remove Button -->
+        
         <ImageView
             android:id="@+id/btnRemoveCart"
             android:layout_width="24dp"
