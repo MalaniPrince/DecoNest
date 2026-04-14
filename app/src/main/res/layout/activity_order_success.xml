@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg_gradient_background"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/ivSuccessIcon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/ic_orders"
+        app:tint="@color/color_tab_active" />
+
+    <TextView
+        android:id="@+id/tvOrderSuccessTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Placed Successfully!"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/color_dark_gray"
+        android:layout_marginTop="24dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tvOrderSuccessSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your order has been confirmed. You will receive an email confirmation shortly."
+        android:textSize="14sp"
+        android:textColor="@color/color_gray_text"
+        android:layout_marginTop="8dp"
+        android:gravity="center" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order ID"
+                    android:textSize="13sp" />
+                <TextView
+                    android:id="@+id/tvSuccessOrderId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="#DN-10293"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Amount Paid"
+                    android:textSize="13sp" />
+                <TextView
+                    android:id="@+id/tvSuccessAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="₹12,499"
+                    android:textStyle="bold"
+                    android:textColor="@color/color_tab_active" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnContinueShopping"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="40dp"
+        android:text="Continue Shopping"
+        android:background="@drawable/bg_gradient_button"
+        android:textColor="@color/color_white"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/btnViewOrders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View My Orders"
+        android:textColor="@color/color_tab_active"
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"
+        android:padding="8dp" />
+
+</LinearLayout>

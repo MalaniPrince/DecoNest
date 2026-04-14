@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/color_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvCouponCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SAVE20"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="monospace"
+                    android:textColor="@color/color_tab_active" />
+
+                <TextView
+                    android:id="@+id/tvCouponDiscount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20% OFF"
+                    android:textSize="13sp"
+                    android:textColor="@color/color_success"
+                    android:textStyle="bold"
+                    android:layout_marginTop="2dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnCopyCoupon"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Copy Code"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                android:textColor="@color/color_white"
+                android:background="@drawable/button_rounded"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_divider"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/tvCouponDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get 20% off on all orders"
+            android:textSize="13sp"
+            android:textColor="@color/color_text_secondary" />
+
+        <TextView
+            android:id="@+id/tvCouponExpiry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Valid till: 30 Apr 2026"
+            android:textSize="11sp"
+            android:textColor="@color/color_gray_text"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
