@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary_night">#2D2D2D</color>
+    <color name="color_background_night">#121212</color>
+    <color name="color_surface_night">#1E1E1E</color>
+    <color name="color_white">#1E1E1E</color>
+    <color name="color_dark_gray">#EEEEEE</color>
+    <color name="color_text_primary">#EEEEEE</color>
+    <color name="color_text_secondary">#AAAAAA</color>
+    <color name="color_divider">#333333</color>
+    <color name="color_search_bg">#2A2A2A</color>
+    <color name="color_gray_text">#999999</color>
+</resources>

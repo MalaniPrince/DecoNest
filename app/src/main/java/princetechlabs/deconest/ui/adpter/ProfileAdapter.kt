@@ -4,12 +4,15 @@ import android.graphics.Color
 import android.graphics.PorterDuff
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
+import princetechlabs.deconest.R
 import princetechlabs.deconest.databinding.ItemProfileOptionBinding
 import princetechlabs.deconest.ui.data.ProfileItem
 
 class ProfileAdapter(
-    private val list: List<ProfileItem>
+    private val list: List<ProfileItem>,
+    private val onItemClick: (ProfileItem) -> Unit
 ) : RecyclerView.Adapter<ProfileAdapter.ProfileViewHolder>() {
 
     inner class ProfileViewHolder(val binding: ItemProfileOptionBinding) :
@@ -30,6 +33,11 @@ class ProfileAdapter(
         holder.binding.iconBgLayout.background.setColorFilter(
             Color.parseColor(item.bgColor), PorterDuff.Mode.SRC_IN
         )
+        holder.itemView.setOnClickListener {
+            val anim = AnimationUtils.loadAnimation(it.context, R.anim.scale_up)
+            holder.itemView.startAnimation(anim)
+            onItemClick(item)
+        }
     }
 
     override fun getItemCount(): Int = list.size

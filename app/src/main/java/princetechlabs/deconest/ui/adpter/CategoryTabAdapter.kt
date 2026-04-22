@@ -43,7 +43,6 @@ class CategoryTabAdapter(
             holder.binding.tvCategoryTab.setTypeface(null, Typeface.NORMAL)
         }
 
-        // Click listener on root layout - reliable click handling
         holder.binding.root.setOnClickListener {
             val pos = holder.adapterPosition
             if (pos == RecyclerView.NO_POSITION) return@setOnClickListener

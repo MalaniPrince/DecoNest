@@ -16,6 +16,18 @@
         android:paddingStart="16dp"
         android:paddingEnd="16dp">
 
+        <ImageView
+            android:id="@+id/btnCartBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_back"
+            android:visibility="gone"
+            android:importantForAccessibility="no" />
+
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -29,7 +41,7 @@
             android:id="@+id/tvCartCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3 items"
+            android:text=""
             android:textColor="@color/color_gray_text"
             android:textSize="13sp" />
 
@@ -90,7 +102,7 @@
         android:orientation="vertical"
         android:visibility="visible">
 
-        <!-- Scrollable Cart Items -->
+        
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -145,7 +157,7 @@
                             android:textSize="15sp"
                             android:textStyle="bold" />
 
-                        <!-- Subtotal -->
+                        
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -164,7 +176,7 @@
                                 android:id="@+id/tvSubtotal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="₹85,997"
+                                android:text="â‚¹85,997"
                                 android:textColor="@color/color_dark_gray"
                                 android:textSize="14sp" />
                         </LinearLayout>
@@ -187,7 +199,7 @@
                                 android:id="@+id/tvDiscount"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="-₹12,899"
+                                android:text="-â‚¹12,899"
                                 android:textColor="@color/color_teal"
                                 android:textSize="14sp" />
                         </LinearLayout>
@@ -239,7 +251,7 @@
                                 android:id="@+id/tvTotal"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="₹73,098"
+                                android:text="â‚¹73,098"
                                 android:textColor="@color/color_tab_active"
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
