@@ -35,10 +35,7 @@ class GridProductAdapter(
         holder.binding.tvGridProductCategory.text = product.category
         holder.binding.tvGridProductPrice.text = product.price
 
-        // Real rating
         holder.binding.ratingBarGridProduct.rating = product.rating
-
-        // MRP crossed out (25% more than selling price)
         val priceInt = product.price.filter { it.isDigit() }.toIntOrNull() ?: 0
         val mrpInt = (priceInt * 1.25).toInt()
         holder.binding.tvGridProductMrp.text = "₹${String.format("%,d", mrpInt)}"

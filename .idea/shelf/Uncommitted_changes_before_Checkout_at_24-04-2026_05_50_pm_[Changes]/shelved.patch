@@ -1,0 +1,20 @@
+Index: app/src/main/res/values/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources xmlns:tools=\"http://schemas.android.com/tools\">\r\n    <!-- Base application theme. -->\r\n    <style name=\"Base.Theme.DecoNest\" parent=\"Theme.MaterialComponents.Light.NoActionBar\">\r\n        <!-- Customize your light theme here. -->\r\n        <item name=\"colorPrimary\">@color/color_primary</item>\r\n        <item name=\"colorPrimaryVariant\">@color/color_primary</item>\r\n        <item name=\"android:statusBarColor\">@color/color_light_gold</item>\r\n\r\n\r\n\r\n    </style>\r\n\r\n    <style name=\"Theme.DecoNest\" parent=\"Base.Theme.DecoNest\" />\r\n</resources>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/themes.xml b/app/src/main/res/values/themes.xml
+--- a/app/src/main/res/values/themes.xml	(revision 763bebb6d459c1171e3726564d55929077c10c11)
++++ b/app/src/main/res/values/themes.xml	(date 1777033198430)
+@@ -5,9 +5,6 @@
+         <item name="colorPrimary">@color/color_primary</item>
+         <item name="colorPrimaryVariant">@color/color_primary</item>
+         <item name="android:statusBarColor">@color/color_light_gold</item>
+-
+-
+-
+     </style>
+ 
+     <style name="Theme.DecoNest" parent="Base.Theme.DecoNest" />

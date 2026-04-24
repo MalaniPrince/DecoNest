@@ -17,10 +17,10 @@
             android:layout_height="wrap_content"
             android:background="@drawable/drawer_header_bg"
             android:orientation="vertical"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:paddingTop="28dp"
-            android:paddingBottom="20dp">
+            android:paddingStart="@dimen/margin_20"
+            android:paddingEnd="@dimen/margin_20"
+            android:paddingTop="@dimen/margin_28"
+            android:paddingBottom="@dimen/margin_20">
 
             <!-- Avatar + info row -->
             <LinearLayout
@@ -31,13 +31,13 @@
 
                 <TextView
                     android:id="@+id/tvProfileInitial"
-                    android:layout_width="80dp"
-                    android:layout_height="80dp"
+                    android:layout_width="@dimen/margin_80"
+                    android:layout_height="@dimen/margin_80"
                     android:background="@drawable/circle_bg"
                     android:gravity="center"
                     android:text="P"
                     android:textColor="#FFFFFF"
-                    android:textSize="30sp"
+                    android:textSize="@dimen/font_24"
                     android:textStyle="bold" />
 
                 <LinearLayout
@@ -45,14 +45,14 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical"
-                    android:paddingStart="16dp">
+                    android:paddingStart="@dimen/margin_16">
 
                     <TextView
                         android:id="@+id/tvProfileName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Priyanshu"
-                        android:textSize="20sp"
+                        android:textSize="@dimen/font_20"
                         android:textStyle="bold"
                         android:textColor="#FFFFFF" />
 
@@ -61,18 +61,18 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="8140410677"
-                        android:textSize="13sp"
+                        android:textSize="@dimen/font_13"
                         android:textColor="#FFE4C8"
-                        android:layout_marginTop="3dp" />
+                        android:layout_marginTop="@dimen/margin_3" />
 
                     <TextView
                         android:id="@+id/tvProfileEmail"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="priyanshu@gmail.com"
-                        android:textSize="12sp"
+                        android:textSize="@dimen/font_12"
                         android:textColor="#FFE4C8"
-                        android:layout_marginTop="2dp" />
+                        android:layout_marginTop="@dimen/margin_2" />
 
                 </LinearLayout>
 
@@ -82,22 +82,21 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/margin_16"
                 android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btnEditProfile"
                     android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:paddingStart="20dp"
-                    android:paddingEnd="20dp"
+                    android:layout_height="@dimen/margin_36"
+                    android:paddingStart="@dimen/margin_20"
+                    android:paddingEnd="@dimen/margin_20"
                     android:text="@string/edit_profile"
                     android:textAllCaps="false"
-                    android:textSize="13sp"
+                    android:textSize="@dimen/font_13"
                     android:textColor="@color/color_tab_active"
                     android:textStyle="bold"
                     android:background="@drawable/circle_white_bg" />
-
             </LinearLayout>
 
         </LinearLayout>
@@ -107,12 +106,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/account_title"
-            android:textSize="14sp"
+            android:textSize="@dimen/font_14"
             android:textStyle="bold"
             android:textColor="@color/color_gray_text"
-            android:paddingStart="16dp"
-            android:paddingTop="20dp"
-            android:paddingBottom="8dp"
+            android:paddingStart="@dimen/margin_16"
+            android:paddingTop="@dimen/margin_20"
+            android:paddingBottom="@dimen/margin_8"
             android:letterSpacing="0.05" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -120,28 +119,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:nestedScrollingEnabled="false"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp" />
+            android:paddingStart="@dimen/margin_8"
+            android:paddingEnd="@dimen/margin_8" />
 
         <!-- ── MORE OPTIONS ────────────────────────────────── -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/account_more_options"
-            android:textSize="14sp"
+            android:textSize="@dimen/font_14"
             android:textStyle="bold"
             android:textColor="@color/color_gray_text"
-            android:paddingStart="16dp"
-            android:paddingTop="20dp"
-            android:paddingBottom="8dp"
+            android:paddingStart="@dimen/margin_16"
+            android:paddingTop="@dimen/margin_20"
+            android:paddingBottom="@dimen/margin_8"
             android:letterSpacing="0.05" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
-            app:cardCornerRadius="16dp"
+            android:layout_marginStart="@dimen/margin_12"
+            android:layout_marginEnd="@dimen/margin_12"
+            app:cardCornerRadius="@dimen/margin_16"
             app:cardElevation="2dp"
             app:cardBackgroundColor="#FFFFFF">
 
@@ -154,26 +153,27 @@
                 <LinearLayout
                     android:id="@+id/menuHelpCenter"
                     android:layout_width="match_parent"
-                    android:layout_height="56dp"
+                    android:layout_height="@dimen/default_view_height_small"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
+                    android:paddingStart="@dimen/margin_16"
+                    android:paddingEnd="@dimen/margin_16"
                     android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true">
 
                     <LinearLayout
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
+                        android:layout_width="@dimen/margin_36"
+                        android:layout_height="@dimen/margin_36"
                         android:background="@drawable/nav_item_active_bg"
                         android:gravity="center"
-                        android:layout_marginEnd="14dp">
+                        android:layout_marginEnd="@dimen/margin_14">
                         <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="@dimen/margin_20"
+                            android:layout_height="@dimen/margin_20"
                             android:src="@drawable/ic_help"
-                            android:tint="@color/color_tab_active" />
+                            android:tint="@color/color_tab_active"
+                            android:adjustViewBounds="true" />
                     </LinearLayout>
 
                     <TextView
@@ -181,42 +181,44 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/account_help_center"
-                        android:textSize="14sp"
+                        android:textSize="@dimen/font_14"
                         android:textColor="@color/color_dark_gray" />
 
                     <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:src="@drawable/ic_chevron_right" />
+                        android:layout_width="@dimen/margin_18"
+                        android:layout_height="@dimen/margin_18"
+                        android:src="@drawable/ic_chevron_right"
+                        android:adjustViewBounds="true" />
                 </LinearLayout>
 
                 <View android:layout_width="match_parent" android:layout_height="1dp"
-                    android:background="#F5F5F5" android:layout_marginStart="66dp" />
+                    android:background="#F5F5F5" android:layout_marginStart="@dimen/margin_66" />
 
                 <!-- Privacy Policy -->
                 <LinearLayout
                     android:id="@+id/menuPrivacy"
                     android:layout_width="match_parent"
-                    android:layout_height="56dp"
+                    android:layout_height="@dimen/default_view_height_small"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
+                    android:paddingStart="@dimen/margin_16"
+                    android:paddingEnd="@dimen/margin_16"
                     android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:focusable="true">
 
                     <LinearLayout
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
+                        android:layout_width="@dimen/margin_36"
+                        android:layout_height="@dimen/margin_36"
                         android:background="@drawable/nav_item_active_bg"
                         android:gravity="center"
-                        android:layout_marginEnd="14dp">
+                        android:layout_marginEnd="@dimen/margin_14">
                         <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
+                            android:layout_width="@dimen/margin_20"
+                            android:layout_height="@dimen/margin_20"
                             android:src="@drawable/ic_privacy"
-                            android:tint="@color/color_tab_active" />
+                            android:tint="@color/color_tab_active"
+                            android:adjustViewBounds="true" />
                     </LinearLayout>
 
                     <TextView
@@ -224,13 +226,14 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/account_privacy_policy"
-                        android:textSize="14sp"
+                        android:textSize="@dimen/font_14"
                         android:textColor="@color/color_dark_gray" />
 
                     <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:src="@drawable/ic_chevron_right" />
+                        android:layout_width="@dimen/margin_18"
+                        android:layout_height="@dimen/margin_18"
+                        android:src="@drawable/ic_chevron_right"
+                        android:adjustViewBounds="true" />
                 </LinearLayout>
 
                 <View android:layout_width="match_parent" android:layout_height="1dp"
@@ -240,7 +243,7 @@
                 <LinearLayout
                     android:id="@+id/menuAbout"
                     android:layout_width="match_parent"
-                    android:layout_height="56dp"
+                    android:layout_height="@dimen/default_view_height_small"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:paddingStart="16dp"
@@ -267,13 +270,14 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/account_about"
-                        android:textSize="14sp"
+                        android:textSize="@dimen/font_14"
                         android:textColor="@color/color_dark_gray" />
 
                     <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:src="@drawable/ic_chevron_right" />
+                        android:layout_width="@dimen/margin_18"
+                        android:layout_height="@dimen/margin_18"
+                        android:src="@drawable/ic_chevron_right"
+                        android:adjustViewBounds="true" />
                 </LinearLayout>
 
                 <View android:layout_width="match_parent" android:layout_height="1dp"
@@ -283,7 +287,7 @@
                 <LinearLayout
                     android:id="@+id/menuDarkMode"
                     android:layout_width="match_parent"
-                    android:layout_height="56dp"
+                    android:layout_height="@dimen/default_view_height_small"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
                     android:paddingStart="16dp"
@@ -308,7 +312,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/account_dark_mode"
-                        android:textSize="14sp"
+                        android:textSize="@dimen/font_14"
                         android:textColor="@color/color_dark_gray" />
 
                     <androidx.appcompat.widget.SwitchCompat
@@ -325,14 +329,14 @@
         <Button
             android:id="@+id/btnLogout"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="24dp"
+            android:layout_height="@dimen/margin_52"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_20"
+            android:layout_marginBottom="@dimen/margin_24"
             android:text="@string/btn_logout"
             android:textAllCaps="false"
-            android:textSize="15sp"
+            android:textSize="@dimen/font_15"
             android:textStyle="bold"
             android:textColor="#E53935"
             android:background="@drawable/qty_bg" />

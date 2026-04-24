@@ -21,11 +21,11 @@
             <TextView
                 android:id="@+id/tvOfferBanner"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="@dimen/margin_40"
                 android:background="@color/color_teal"
                 android:text="Extra 15% Off on All Home and Decor Orders*"
                 android:textColor="@color/color_white"
-                android:textSize="13sp"
+                android:textSize="@dimen/font_13"
                 android:gravity="center" />
 
             <LinearLayout
@@ -38,28 +38,29 @@
                 <LinearLayout
                     android:id="@+id/layoutSearch"
                     android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="14dp"
-                    android:layout_marginEnd="14dp"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginBottom="10dp"
+                    android:layout_height="@dimen/margin_48"
+                    android:layout_marginStart="@dimen/margin_14"
+                    android:layout_marginEnd="@dimen/margin_14"
+                    android:layout_marginTop="@dimen/margin_12"
+                    android:layout_marginBottom="@dimen/margin_10"
                     android:background="@drawable/search_bg"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
-                    android:paddingStart="14dp"
-                    android:paddingEnd="14dp">
+                    android:paddingStart="@dimen/margin_14"
+                    android:paddingEnd="@dimen/margin_14">
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="@dimen/margin_20"
+                        android:layout_height="@dimen/margin_20"
                         android:src="@drawable/ic_search"
-                        android:layout_marginEnd="10dp" />
+                        android:layout_marginEnd="@dimen/margin_10"
+                        android:adjustViewBounds="true" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Search Sofas, Beds, Tables..."
-                        android:textSize="13sp"
+                        android:textSize="@dimen/font_13"
                         android:textColor="@color/color_gray_text" />
 
                 </LinearLayout>
@@ -67,18 +68,18 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvCategoryTabs"
                     android:layout_width="match_parent"
-                    android:layout_height="46dp"
+                    android:layout_height="@dimen/margin_46"
                     android:nestedScrollingEnabled="false"
-                    android:paddingStart="4dp"
-                    android:paddingEnd="4dp" />
+                    android:paddingStart="@dimen/margin_4"
+                    android:paddingEnd="@dimen/margin_4" />
 
             </LinearLayout>
 
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginTop="8dp" />
+                android:layout_height="@dimen/default_view_height_large"
+                android:layout_marginTop="@dimen/margin_8" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -91,24 +92,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:paddingTop="14dp"
-                    android:paddingBottom="10dp"
+                    android:paddingStart="@dimen/margin_16"
+                    android:paddingEnd="@dimen/margin_16"
+                    android:paddingTop="@dimen/margin_14"
+                    android:paddingBottom="@dimen/margin_10"
                     android:gravity="center_vertical">
 
                     <View
-                        android:layout_width="4dp"
-                        android:layout_height="20dp"
+                        android:layout_width="@dimen/margin_4"
+                        android:layout_height="@dimen/margin_20"
                         android:background="@color/color_tab_active"
-                        android:layout_marginEnd="8dp" />
+                        android:layout_marginEnd="@dimen/margin_8" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Shop by Category"
-                        android:textSize="16sp"
+                        android:textSize="@dimen/font_16"
                         android:textStyle="bold"
                         android:textColor="@color/color_dark_gray" />
 
@@ -118,9 +119,9 @@
                     android:id="@+id/rvCategoryGrid"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingStart="8dp"
-                    android:paddingEnd="8dp"
-                    android:paddingBottom="14dp"
+                    android:paddingStart="@dimen/margin_8"
+                    android:paddingEnd="@dimen/margin_8"
+                    android:paddingBottom="@dimen/margin_14"
                     android:nestedScrollingEnabled="false" />
 
             </LinearLayout>
@@ -142,10 +143,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/section_trending"
-                        android:textSize="16sp"
+                        android:textSize="@dimen/font_16"
                         android:textStyle="bold"
-                        android:paddingStart="16dp"
-                        android:paddingTop="14dp"
+                        android:paddingStart="@dimen/margin_16"
+                        android:paddingTop="@dimen/margin_14"
                         android:textColor="@color/color_dark_gray" />
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -167,10 +168,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/section_new_arrivals"
-                        android:textSize="16sp"
+                        android:textSize="@dimen/font_16"
                         android:textStyle="bold"
-                        android:paddingStart="16dp"
-                        android:paddingTop="14dp"
+                        android:paddingStart="@dimen/margin_16"
+                        android:paddingTop="@dimen/margin_14"
                         android:textColor="@color/color_dark_gray" />
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -196,24 +197,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:paddingStart="16dp"
-                        android:paddingEnd="16dp"
-                        android:paddingTop="14dp"
-                        android:paddingBottom="10dp"
+                        android:paddingStart="@dimen/margin_16"
+                        android:paddingEnd="@dimen/margin_16"
+                        android:paddingTop="@dimen/margin_14"
+                        android:paddingBottom="@dimen/margin_10"
                         android:gravity="center_vertical">
 
                         <View
-                            android:layout_width="4dp"
-                            android:layout_height="20dp"
+                            android:layout_width="@dimen/margin_4"
+                            android:layout_height="@dimen/margin_20"
                             android:background="#9C27B0"
-                            android:layout_marginEnd="8dp" />
+                            android:layout_marginEnd="@dimen/margin_8" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/recently_viewed_title"
-                            android:textSize="16sp"
+                            android:textSize="@dimen/font_16"
                             android:textStyle="bold"
                             android:textColor="@color/color_dark_gray" />
 

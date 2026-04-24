@@ -10,6 +10,9 @@
         android:name="princetechlabs.deconest.ui.login.LoginFragment"
         android:label="@string/home_label"
         tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_LoginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
     </fragment>
     <fragment
         android:id="@+id/SignUpFragment"
@@ -18,5 +21,17 @@
 
         tools:layout="@layout/fragment_sign_up">
 
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="princetechlabs.deconest.ui.login.ForgotPasswordFragment"
+        android:label="ForgotPasswordFragment"
+        tools:layout="@layout/fragment_forgot_password">
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_LoginFragment"
+            app:destination="@id/LoginFragment"
+            app:popUpTo="@id/LoginFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

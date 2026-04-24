@@ -94,7 +94,6 @@
     <string name="toast_removed_from_wishlist">Removed from Wishlist</string>
     <string name="toast_added_to_cart">Added to shopping cart</string>
 
-    <!-- Home sections -->
     <string name="section_trending">Trending Products</string>
     <string name="section_new_arrivals">New Arrivals</string>
     <string name="section_shop_by_category">Shop by Category</string>
@@ -102,34 +101,26 @@
     <string name="no_products_found">No products found in this category</string>
     <string name="offer_banner">Extra 15% Off on All Home and Decor Orders*</string>
 
-    <!-- Sort -->
     <string name="sort_by">Sort By</string>
     <string name="sort_default">Default</string>
     <string name="sort_low_to_high">Price: Low to High</string>
     <string name="sort_high_to_low">Price: High to Low</string>
     <string name="items_suffix">items</string>
 
-    <!-- Recently Viewed -->
     <string name="recently_viewed_title">Recently Viewed</string>
     <string name="recently_viewed_empty_title">No recently viewed items</string>
     <string name="recently_viewed_empty_subtitle">Browse products and they\'ll show up here</string>
 
-    <!-- Notifications -->
     <string name="notif_title">Notifications</string>
     <string name="notif_coming_soon">Push notifications are coming soon!\nStay tuned for exciting updates and offers.</string>
 
-    <!-- Logout confirm -->
     <string name="confirm_logout_title">Logout</string>
     <string name="confirm_logout_message">Are you sure you want to logout?</string>
     <string name="cancel">Cancel</string>
     <string name="btn_logout">Logout</string>
-
-    <!-- General -->
     <string name="coming_soon_message">This feature is coming soon. Stay tuned!</string>
     <string name="about_message">DecoNest v1.0.0\n\nYour premium home decor shopping destination.\nCurated furniture, lighting and décor for your dream home.\n\n© 2025 DecoNest</string>
     <string name="edit_profile">Edit Profile</string>
-
-    <!-- Account profile items -->
     <string name="account_orders">My Orders</string>
     <string name="account_orders_sub">Track your orders</string>
     <string name="account_wallet">My Wallet</string>
@@ -152,4 +143,17 @@
     <string name="app_tagline">Your Home, Your Style</string>
     <string name="app_version">App Version 1.0.0</string>
     <string name="app_premium_label">Premium Home Decor</string>
+    <string name="forgot_password_title">Forgot Password</string>
+    <string name="forgot_password_subtitle">Enter your registered email address. We\'ll send you a password reset link.</string>
+    <string name="hint_enter_email">Enter your email</string>
+    <string name="btn_send_reset_link">Send Reset Link</string>
+    <string name="back_to_login">Back to Login</string>
+    <string name="error_empty_email">Email cannot be empty</string>
+    <string name="error_invalid_email">Please enter a valid email address</string>
+    <string name="error_user_not_found">No account found with this email</string>
+    <string name="success_reset_link_sent">Reset link sent! Please check your inbox.</string>
+    <string name="error_no_internet">No internet connection. Please try again.</string>
+    <string name="forgot_password_question">Forgot Password?</string>
+    <string name="retry">Retry</string>
+    <string name="error_loading_products">Error loading products. Please try again.</string>
 </resources>

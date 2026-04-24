@@ -7,72 +7,85 @@
     android:orientation="vertical">
 
     <!-- ── HERO IMAGE SECTION ────────────────────────────── -->
-    <FrameLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="310dp">
+        android:layout_height="@dimen/default_image_size_310dp">
 
         <!-- Product image -->
         <ImageView
             android:id="@+id/ivProductDetailImage"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/image1" />
+            android:src="@drawable/image1"
+            android:adjustViewBounds="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <!-- Dark gradient overlay at bottom -->
         <View
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="120dp"
-            android:layout_gravity="bottom"
-            android:background="@drawable/img_detail_overlay" />
+            android:background="@drawable/img_detail_overlay"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <!-- Back button (top-left) -->
         <ImageView
             android:id="@+id/btnBack"
-            android:layout_width="42dp"
-            android:layout_height="42dp"
-            android:layout_margin="14dp"
+            android:layout_width="@dimen/margin_42"
+            android:layout_height="@dimen/margin_42"
+            android:layout_margin="@dimen/margin_14"
             android:background="@drawable/circle_white_bg"
             android:clickable="true"
             android:elevation="4dp"
             android:focusable="true"
-            android:padding="10dp"
-            android:src="@drawable/ic_back" />
+            android:padding="@dimen/margin_10"
+            android:src="@drawable/ic_back"
+            android:adjustViewBounds="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <!-- Top-right: Wishlist + Share -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="top|end"
-            android:layout_margin="14dp"
+            android:layout_margin="@dimen/margin_14"
             android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
             <ImageView
                 android:id="@+id/btnShare"
-                android:layout_width="42dp"
-                android:layout_height="42dp"
-                android:layout_marginEnd="8dp"
+                android:layout_width="@dimen/margin_42"
+                android:layout_height="@dimen/margin_42"
+                android:layout_marginEnd="@dimen/margin_8"
                 android:background="@drawable/circle_white_bg"
                 android:clickable="true"
                 android:elevation="4dp"
                 android:focusable="true"
-                android:padding="10dp"
-                android:src="@drawable/ic_share" />
+                android:padding="@dimen/margin_10"
+                android:src="@drawable/ic_share"
+                android:adjustViewBounds="true" />
 
             <ImageView
                 android:id="@+id/btnWishlist"
-                android:layout_width="42dp"
-                android:layout_height="42dp"
+                android:layout_width="@dimen/margin_42"
+                android:layout_height="@dimen/margin_42"
                 android:background="@drawable/circle_white_bg"
                 android:clickable="true"
                 android:elevation="4dp"
                 android:focusable="true"
-                android:padding="10dp"
-                android:src="@drawable/ic_wishlist" />
+                android:padding="@dimen/margin_10"
+                android:src="@drawable/ic_wishlist"
+                android:adjustViewBounds="true" />
         </LinearLayout>
 
-    </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- ── CONTENT SHEET ─────────────────────────────────── -->
     <androidx.core.widget.NestedScrollView
@@ -88,10 +101,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingTop="20dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:paddingBottom="16dp">
+            android:paddingTop="@dimen/margin_20"
+            android:paddingStart="@dimen/margin_16"
+            android:paddingEnd="@dimen/margin_16"
+            android:paddingBottom="@dimen/margin_16">
 
             <!-- ── Category chip ── -->
             <TextView
@@ -99,13 +112,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_btn_orange_round"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp"
-                android:paddingTop="4dp"
-                android:paddingBottom="4dp"
+                android:paddingStart="@dimen/margin_12"
+                android:paddingEnd="@dimen/margin_12"
+                android:paddingTop="@dimen/margin_4"
+                android:paddingBottom="@dimen/margin_4"
                 android:text="Furniture"
                 android:textColor="#FFFFFF"
-                android:textSize="11sp"
+                android:textSize="@dimen/font_11"
                 android:textStyle="bold" />
 
             <!-- ── Product Name ── -->
@@ -113,10 +126,10 @@
                 android:id="@+id/tvDetailName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/margin_10"
                 android:text="Product Name"
                 android:textColor="#212121"
-                android:textSize="20sp"
+                android:textSize="@dimen/font_20"
                 android:textStyle="bold"
                 android:lineSpacingMultiplier="1.1" />
 
@@ -144,10 +157,10 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="@dimen/margin_8"
                     android:text="4.2 ★  (128 reviews)"
                     android:textColor="#888888"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/font_12" />
 
             </LinearLayout>
 
@@ -173,7 +186,7 @@
                     android:layout_height="wrap_content"
                     android:text="&#x20b9;0"
                     android:textColor="#212121"
-                    android:textSize="28sp"
+                    android:textSize="@dimen/font_28"
                     android:textStyle="bold" />
 
                 <!-- Discount badge -->
@@ -181,15 +194,15 @@
                     android:id="@+id/tvDetailDiscount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
+                    android:layout_marginStart="@dimen/margin_12"
                     android:background="@drawable/bg_btn_orange_round"
-                    android:paddingStart="10dp"
-                    android:paddingEnd="10dp"
-                    android:paddingTop="4dp"
-                    android:paddingBottom="4dp"
+                    android:paddingStart="@dimen/margin_10"
+                    android:paddingEnd="@dimen/margin_10"
+                    android:paddingTop="@dimen/margin_4"
+                    android:paddingBottom="@dimen/margin_4"
                     android:text="25% off"
                     android:textColor="#FFFFFF"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/font_12"
                     android:textStyle="bold"
                     android:visibility="gone" />
 
@@ -209,17 +222,17 @@
                     android:layout_height="wrap_content"
                     android:text="M.R.P: &#x20b9;0"
                     android:textColor="#BDBDBD"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/font_12"
                     android:visibility="gone" />
 
                 <TextView
                     android:id="@+id/tvDetailSaving"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
+                    android:layout_marginStart="@dimen/margin_10"
                     android:text="You save &#x20b9;0"
                     android:textColor="#4CAF50"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/font_12"
                     android:textStyle="bold"
                     android:visibility="gone" />
             </LinearLayout>
@@ -246,7 +259,7 @@
                     android:layout_weight="1"
                     android:text="Free Delivery  •  7-day return"
                     android:textColor="#2E7D32"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/font_12"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -272,26 +285,26 @@
                     android:layout_weight="1"
                     android:text="@string/product_quantity_label"
                     android:textColor="#212121"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/font_14"
                     android:textStyle="bold" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
+                    android:layout_height="@dimen/margin_40"
                     android:background="@drawable/qty_bg"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/btnDetailDecrease"
-                        android:layout_width="42dp"
-                        android:layout_height="40dp"
+                        android:layout_width="@dimen/margin_42"
+                        android:layout_height="@dimen/margin_40"
                         android:clickable="true"
                         android:focusable="true"
                         android:gravity="center"
                         android:text="−"
                         android:textColor="@color/color_tab_active"
-                        android:textSize="22sp"
+                        android:textSize="@dimen/font_22"
                         android:textStyle="bold" />
 
                     <View
@@ -301,12 +314,12 @@
 
                     <TextView
                         android:id="@+id/tvDetailQty"
-                        android:layout_width="44dp"
-                        android:layout_height="40dp"
+                        android:layout_width="@dimen/margin_44"
+                        android:layout_height="@dimen/margin_40"
                         android:gravity="center"
                         android:text="1"
                         android:textColor="#212121"
-                        android:textSize="15sp"
+                        android:textSize="@dimen/font_15"
                         android:textStyle="bold" />
 
                     <View
@@ -316,14 +329,14 @@
 
                     <TextView
                         android:id="@+id/btnDetailIncrease"
-                        android:layout_width="42dp"
-                        android:layout_height="40dp"
+                        android:layout_width="@dimen/margin_42"
+                        android:layout_height="@dimen/margin_40"
                         android:clickable="true"
                         android:focusable="true"
                         android:gravity="center"
                         android:text="+"
                         android:textColor="@color/color_tab_active"
-                        android:textSize="22sp"
+                        android:textSize="@dimen/font_22"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -344,18 +357,18 @@
                 android:layout_height="wrap_content"
                 android:text="@string/product_about_title"
                 android:textColor="#212121"
-                android:textSize="15sp"
+                android:textSize="@dimen/font_15"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvDetailDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/margin_8"
                 android:lineSpacingMultiplier="1.6"
                 android:text="High quality product designed to enhance your home decor."
                 android:textColor="#555555"
-                android:textSize="13sp" />
+                android:textSize="@dimen/font_13" />
 
             <!-- ── Divider ── -->
             <View
@@ -378,7 +391,7 @@
                     android:layout_weight="1"
                     android:text="Reviews &amp; Ratings"
                     android:textColor="#212121"
-                    android:textSize="15sp"
+                    android:textSize="@dimen/font_15"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -387,36 +400,36 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/margin_10"
                 android:background="@drawable/qty_bg"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="4dp">
+                android:padding="@dimen/margin_4">
 
                 <EditText
                     android:id="@+id/etReviewText"
                     android:layout_width="0dp"
-                    android:layout_height="44dp"
+                    android:layout_height="@dimen/margin_44"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
                     android:hint="Write your review…"
-                    android:paddingStart="10dp"
+                    android:paddingStart="@dimen/margin_10"
                     android:textColor="#212121"
                     android:textColorHint="#BDBDBD"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/font_13" />
 
                 <Button
                     android:id="@+id/btnSubmitReview"
                     android:layout_width="wrap_content"
-                    android:layout_height="40dp"
-                    android:layout_marginEnd="4dp"
+                    android:layout_height="@dimen/margin_40"
+                    android:layout_marginEnd="@dimen/margin_4"
                     android:background="@drawable/bg_btn_orange_round"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
+                    android:paddingStart="@dimen/margin_16"
+                    android:paddingEnd="@dimen/margin_16"
                     android:text="Post"
                     android:textAllCaps="false"
                     android:textColor="#FFFFFF"
-                    android:textSize="13sp"
+                    android:textSize="@dimen/font_13"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -444,34 +457,34 @@
         android:elevation="12dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="14dp">
+        android:padding="@dimen/margin_14">
 
         <Button
             android:id="@+id/btnAddToCart"
             android:layout_width="0dp"
-            android:layout_height="54dp"
+            android:layout_height="@dimen/default_button_height"
             android:layout_weight="1"
             android:background="@drawable/bg_btn_orange_round"
             android:text="@string/btn_add_to_cart"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="15sp"
+            android:textSize="@dimen/font_15"
             android:textStyle="bold" />
 
         <View
-            android:layout_width="10dp"
+            android:layout_width="@dimen/margin_10"
             android:layout_height="match_parent" />
 
         <Button
             android:id="@+id/btnBuyNow"
             android:layout_width="0dp"
-            android:layout_height="54dp"
+            android:layout_height="@dimen/default_button_height"
             android:layout_weight="1"
             android:background="@drawable/bg_btn_dark_round"
             android:text="@string/btn_buy_now"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
-            android:textSize="15sp"
+            android:textSize="@dimen/font_15"
             android:textStyle="bold" />
 
     </LinearLayout>

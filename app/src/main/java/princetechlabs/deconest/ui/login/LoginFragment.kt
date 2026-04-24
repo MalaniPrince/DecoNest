@@ -90,6 +90,10 @@ class LoginFragment : Fragment() {
         binding.CreateAccount.setOnClickListener {
             findNavController().navigate(R.id.SignUpFragment)
         }
+
+        binding.tvForgotPassword.setOnClickListener {
+            findNavController().navigate(R.id.action_LoginFragment_to_forgotPasswordFragment)
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

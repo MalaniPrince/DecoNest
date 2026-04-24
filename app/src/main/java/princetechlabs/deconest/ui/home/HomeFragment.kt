@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.coroutines.launch
@@ -22,6 +23,7 @@ import princetechlabs.deconest.ui.data.ProductData
 import princetechlabs.deconest.ui.utils.CustomDialog
 import princetechlabs.deconest.ui.utils.MasterDataUtils
 import princetechlabs.deconest.ui.utils.ProductRepository
+import princetechlabs.deconest.ui.category.CategoryProductsFragment
 import princetechlabs.deconest.ui.utils.RecentlyViewedRepository
 
 class HomeFragment : Fragment() {
@@ -139,28 +141,11 @@ class HomeFragment : Fragment() {
         binding.rvCategoryGrid.layoutManager =
             GridLayoutManager(requireContext(), 2, GridLayoutManager.HORIZONTAL, false)
         binding.rvCategoryGrid.adapter = CategoryGridHomeAdapter(categoryItems) { item ->
-            // Map grid item name to category filter tab name
-            val tabName = when {
-                item.name.contains("Furniture",   ignoreCase = true) -> "Furniture"
-                item.name.contains("Living",      ignoreCase = true) -> "Living Room"
-                item.name.contains("Kitchen",     ignoreCase = true) -> "Kitchen"
-                item.name.contains("Mattress",    ignoreCase = true) -> "Mattresses"
-                item.name.contains("Lamp",        ignoreCase = true) -> "Living Room"
-                item.name.contains("Sofa",        ignoreCase = true) -> "Furniture"
-                item.name.contains("Modular",     ignoreCase = true) -> "Furniture"
-                item.name.contains("Furnishing",  ignoreCase = true) -> "Living Room"
-                item.name.contains("Decor",       ignoreCase = true) -> "Living Room"
-                else -> item.name
-            }
-            val products = princetechlabs.deconest.ui.utils.ProductRepository.getByCategory(tabName)
-                .ifEmpty { princetechlabs.deconest.ui.utils.ProductRepository.getAllProducts() }
-            trendingAdapter.updateList(products.take(6))
-            newArrivalsAdapter.updateList(products.reversed().take(6))
-            // Scroll down to show filtered products
-            binding.swipeRefresh.post {
-                (view?.parent?.parent as? androidx.core.widget.NestedScrollView)
-                    ?.smoothScrollTo(0, binding.recyclerView.top + 200)
-            }
+            // Navigate to CategoryProductsFragment with the exact category name from the icon
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainer, CategoryProductsFragment.newInstance(item.name))
+                .addToBackStack(null)
+                .commit()
         }
     }
 
