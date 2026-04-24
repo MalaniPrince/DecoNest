@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="180dp"
+    android:layout_width="@dimen/product_card_width"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
-    app:cardCornerRadius="16dp"
+    android:layout_margin="@dimen/margin_8"
+    app:cardCornerRadius="@dimen/margin_16"
     app:cardElevation="4dp"
     app:cardBackgroundColor="#FFFFFF">
 
@@ -15,29 +15,30 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="160dp">
+            android:layout_height="@dimen/default_image_size_160dp">
 
             <ImageView
                 android:id="@+id/ivProduct"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/image1" />
+                android:src="@drawable/image1"
+                android:adjustViewBounds="true" />
 
             <!-- Discount badge (top-left) -->
             <TextView
                 android:id="@+id/tvDiscountBadge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_margin="@dimen/margin_8"
                 android:layout_gravity="top|start"
                 android:background="@drawable/bg_gradient_accent"
-                android:paddingStart="7dp"
-                android:paddingEnd="7dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
+                android:paddingStart="@dimen/margin_7"
+                android:paddingEnd="@dimen/margin_7"
+                android:paddingTop="@dimen/margin_3"
+                android:paddingBottom="@dimen/margin_3"
                 android:textColor="#FFFFFF"
-                android:textSize="10sp"
+                android:textSize="@dimen/font_10"
                 android:textStyle="bold"
                 android:text="25% OFF"
                 android:visibility="visible" />
@@ -45,15 +46,16 @@
             <!-- Wishlist heart button (top-right) -->
             <ImageView
                 android:id="@+id/btnCardWishlist"
-                android:layout_width="34dp"
-                android:layout_height="34dp"
+                android:layout_width="@dimen/default_button_size_medium"
+                android:layout_height="@dimen/default_button_size_medium"
                 android:layout_gravity="top|end"
-                android:layout_margin="8dp"
+                android:layout_margin="@dimen/margin_8"
                 android:background="@drawable/circle_bg"
                 android:clickable="true"
                 android:focusable="true"
-                android:padding="8dp"
-                android:src="@drawable/ic_wishlist" />
+                android:padding="@dimen/margin_8"
+                android:src="@drawable/ic_wishlist"
+                android:adjustViewBounds="true" />
 
             <!-- "New" / "Hot" label badge (bottom-left) -->
             <TextView
@@ -61,14 +63,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|start"
-                android:layout_margin="8dp"
+                android:layout_margin="@dimen/margin_8"
                 android:background="@drawable/bg_gradient_button"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
+                android:paddingStart="@dimen/margin_8"
+                android:paddingEnd="@dimen/margin_8"
+                android:paddingTop="@dimen/margin_3"
+                android:paddingBottom="@dimen/margin_3"
                 android:textColor="#FFFFFF"
-                android:textSize="10sp"
+                android:textSize="@dimen/font_10"
                 android:textStyle="bold"
                 android:text="HOT"
                 android:visibility="gone" />
@@ -79,14 +81,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="@dimen/margin_10">
 
             <TextView
                 android:id="@+id/tvProductName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Product Name"
-                android:textSize="13sp"
+                android:textSize="@dimen/font_13"
                 android:textStyle="bold"
                 android:textColor="#212121"
                 android:maxLines="2"
@@ -97,9 +99,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Furniture"
-                android:textSize="11sp"
+                android:textSize="@dimen/font_11"
                 android:textColor="#9E9E9E"
-                android:layout_marginTop="2dp" />
+                android:layout_marginTop="@dimen/margin_2" />
 
             <RatingBar
                 android:id="@+id/ratingBarProduct"
@@ -119,9 +121,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="₹16,999"
-                android:textSize="11sp"
+                android:textSize="@dimen/font_11"
                 android:textColor="#BDBDBD"
-                android:layout_marginTop="3dp" />
+                android:layout_marginTop="@dimen/margin_3" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -136,20 +138,21 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="₹12,999"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/font_14"
                     android:textStyle="bold"
                     android:textColor="#E67E22" />
 
                 <ImageView
                     android:id="@+id/btnCardAddToCart"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="@dimen/default_button_size_small"
+                    android:layout_height="@dimen/default_button_size_small"
                     android:background="@drawable/bg_gradient_accent"
                     android:clickable="true"
                     android:focusable="true"
-                    android:padding="6dp"
+                    android:padding="@dimen/margin_6"
                     android:src="@drawable/ic_nav_cart"
-                    android:tint="@color/color_white" />
+                    android:tint="@color/color_white"
+                    android:adjustViewBounds="true" />
 
             </LinearLayout>
 

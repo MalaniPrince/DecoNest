@@ -6,24 +6,25 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@drawable/bg_gradient_background"
-    android:padding="24dp">
+    android:padding="@dimen/margin_24">
 
     <ImageView
         android:id="@+id/ivSuccessIcon"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="@dimen/margin_120"
+        android:layout_height="@dimen/margin_120"
         android:src="@drawable/ic_orders"
-        app:tint="@color/color_tab_active" />
+        app:tint="@color/color_tab_active"
+        android:adjustViewBounds="true" />
 
     <TextView
         android:id="@+id/tvOrderSuccessTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Order Placed Successfully!"
-        android:textSize="22sp"
+        android:textSize="@dimen/font_22"
         android:textStyle="bold"
         android:textColor="@color/color_dark_gray"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/margin_24"
         android:gravity="center" />
 
     <TextView
@@ -31,23 +32,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Your order has been confirmed. You will receive an email confirmation shortly."
-        android:textSize="14sp"
+        android:textSize="@dimen/font_14"
         android:textColor="@color/color_gray_text"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/margin_8"
         android:gravity="center" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:cardCornerRadius="12dp"
+        android:layout_marginTop="@dimen/margin_32"
+        app:cardCornerRadius="@dimen/margin_12"
         app:cardElevation="2dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="@dimen/margin_16">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -56,7 +57,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Order ID"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/font_13" />
                 <TextView
                     android:id="@+id/tvSuccessOrderId"
                     android:layout_width="wrap_content"
@@ -74,7 +75,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Amount Paid"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/font_13" />
                 <TextView
                     android:id="@+id/tvSuccessAmount"
                     android:layout_width="wrap_content"
@@ -91,8 +92,8 @@
     <Button
         android:id="@+id/btnContinueShopping"
         android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="@dimen/margin_52"
+        android:layout_marginTop="@dimen/margin_40"
         android:text="Continue Shopping"
         android:background="@drawable/bg_gradient_button"
         android:textColor="@color/color_white"
@@ -104,8 +105,8 @@
         android:layout_height="wrap_content"
         android:text="View My Orders"
         android:textColor="@color/color_tab_active"
-        android:textSize="14sp"
-        android:layout_marginTop="16dp"
-        android:padding="8dp" />
+        android:textSize="@dimen/font_14"
+        android:layout_marginTop="@dimen/margin_16"
+        android:padding="@dimen/margin_8" />
 
 </LinearLayout>

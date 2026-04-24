@@ -20,4 +20,6 @@
     <color name="color_nav_end">#F4EBDB</color>
     <color name="color_card_start">#FFFFFFFF</color>
     <color name="color_card_end">#F4EBDB</color>
+    <color name="color_secondary">#FFFFFF</color>
+    <color name="color_tab_inactive">#BDBDBD</color>
 </resources>

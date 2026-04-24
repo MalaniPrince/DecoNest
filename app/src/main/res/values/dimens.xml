@@ -3,8 +3,12 @@
     <dimen name="width_8">8dp</dimen>
 
     <dimen name="margin_510">510dp</dimen>
+    <dimen name="margin_290">290dp</dimen>
+    <dimen name="margin_250">250dp</dimen>
+    <dimen name="margin_160">160dp</dimen>
     <dimen name="margin_96">96dp</dimen>
-    <dimen name="margin_72">72</dimen>
+    <dimen name="margin_92">92dp</dimen>
+    <dimen name="margin_72">72dp</dimen>
     <dimen name="margin_67">67dp</dimen>
     <dimen name="margin_64">64dp</dimen>
     <dimen name="margin_56">56dp</dimen>
@@ -14,14 +18,18 @@
     <dimen name="margin_36">36dp</dimen>
     <dimen name="margin_32">32dp</dimen>
     <dimen name="margin_28">28dp</dimen>
-    <dimen name="margin_20">20dp</dimen>
     <dimen name="margin_24">24dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_18">18dp</dimen>
     <dimen name="margin_16">16dp</dimen>
     <dimen name="margin_14">14dp</dimen>
     <dimen name="margin_12">12dp</dimen>
     <dimen name="margin_10">10dp</dimen>
     <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_7">7dp</dimen>
+    <dimen name="margin_6">6dp</dimen>
     <dimen name="margin_4">4dp</dimen>
+    <dimen name="margin_3">3dp</dimen>
     <dimen name="margin_2">2dp</dimen>
     <dimen name="margin_1">1dp</dimen>
 
@@ -39,8 +47,12 @@
     <dimen name="padding_20">20dp</dimen>
     <dimen name="padding_16">16dp</dimen>
     <dimen name="padding_12">12dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
     <dimen name="padding_8">8dp</dimen>
+    <dimen name="padding_7">7dp</dimen>
+    <dimen name="padding_6">6dp</dimen>
     <dimen name="padding_4">4dp</dimen>
+    <dimen name="padding_3">3dp</dimen>
     <dimen name="padding_2">2dp</dimen>
 
     <dimen name="default_big_button">44dp</dimen>
@@ -93,14 +105,19 @@
     <dimen name="font_40">40sp</dimen>
     <dimen name="font_36">36sp</dimen>
     <dimen name="font_28">28sp</dimen>
+    <dimen name="font_25">25sp</dimen>
     <dimen name="font_24">24sp</dimen>
     <dimen name="font_20">20sp</dimen>
     <dimen name="font_18">18sp</dimen>
+    <dimen name="font_17">17sp</dimen>
     <dimen name="font_16">16sp</dimen>
+    <dimen name="font_15">15sp</dimen>
     <dimen name="font_14">14sp</dimen>
+    <dimen name="font_13">13sp</dimen>
     <dimen name="font_12">12sp</dimen>
     <dimen name="font_11">11sp</dimen>
-    <dimen name="font_25">25sp</dimen>
+    <dimen name="font_10">10sp</dimen>
+
     <dimen name="default_cardView_height">100dp</dimen>
     <dimen name="small_coin_size_104dp">104dp</dimen>
     <dimen name="medium_coin_size_124dp">124dp</dimen>
@@ -115,19 +132,30 @@
     <dimen name="width_300dp">300dp</dimen>
     <dimen name="height_350p">350dp</dimen>
     <dimen name="layout_weight_60">60</dimen>
-    <dimen name="margin_18">18dp</dimen>
-    <dimen name="margin_250">250dp</dimen>
-    <dimen name="margin_290">290dp</dimen>
     <dimen name="fc_item_width">111dp</dimen>
     <dimen name="fc_item_height">104dp</dimen>
     <dimen name="default_shadow_height">90dp</dimen>
     <dimen name="default_view_height">62dp</dimen>
-    <dimen name="margin_160">160dp</dimen>
-    <dimen name="margin_6">6dp</dimen>
-    <dimen name="margin_92">92dp</dimen>
     <dimen name="icon_direction_size_28">28dp</dimen>
-    <dimen name="padding_10">10dp</dimen>
-    <dimen name="padding_6">6dp</dimen>
-
-
+    <dimen name="default_view_height_medium">56dp</dimen>
+    <dimen name="margin_120">120dp</dimen>
+    <dimen name="margin_90">90dp</dimen>
+    <dimen name="margin_88">88dp</dimen>
+    <dimen name="margin_80">80dp</dimen>
+    <dimen name="margin_52">52dp</dimen>
+    <dimen name="margin_50">50dp</dimen>
+    <dimen name="margin_44">44dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="drawer_width">300dp</dimen>
+    <dimen name="default_button_height">52dp</dimen>
+    <dimen name="default_view_height_large">62dp</dimen>
+    <dimen name="default_view_height_small">48dp</dimen>
+    <dimen name="default_image_size_large">200dp</dimen>
+    <dimen name="margin_66">66dp</dimen>
+    <dimen name="margin_46">46dp</dimen>
+    <dimen name="margin_25">25dp</dimen>
+    <dimen name="font_22">22sp</dimen>
+    <dimen name="product_card_width">160dp</dimen>
+    <dimen name="default_image_size_160dp">160dp</dimen>
+    <dimen name="default_button_size_small">32dp</dimen>
 </resources>

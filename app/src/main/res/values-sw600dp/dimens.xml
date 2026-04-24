@@ -1,0 +1,50 @@
+<resources>
+    <dimen name="fab_margin">24dp</dimen>
+    <dimen name="margin_32">40dp</dimen>
+    <dimen name="margin_24">32dp</dimen>
+    <dimen name="margin_20">28dp</dimen>
+    <dimen name="margin_16">24dp</dimen>
+    <dimen name="margin_12">18dp</dimen>
+    <dimen name="margin_10">16dp</dimen>
+    <dimen name="margin_8">12dp</dimen>
+    <dimen name="margin_4">8dp</dimen>
+
+    <dimen name="padding_32">40dp</dimen>
+    <dimen name="padding_24">32dp</dimen>
+    <dimen name="padding_20">28dp</dimen>
+    <dimen name="padding_16">24dp</dimen>
+    <dimen name="padding_12">18dp</dimen>
+    <dimen name="padding_10">16dp</dimen>
+    <dimen name="padding_8">12dp</dimen>
+    <dimen name="padding_4">8dp</dimen>
+
+    <dimen name="font_24">30sp</dimen>
+    <dimen name="font_20">26sp</dimen>
+    <dimen name="font_18">24sp</dimen>
+    <dimen name="font_16">20sp</dimen>
+    <dimen name="font_14">18sp</dimen>
+    <dimen name="font_12">16sp</dimen>
+    <dimen name="font_11">14sp</dimen>
+    <dimen name="font_10">13sp</dimen>
+    <dimen name="drawer_width">400dp</dimen>
+    <dimen name="default_view_height_medium">64dp</dimen>
+    <dimen name="margin_120">160dp</dimen>
+    <dimen name="margin_90">110dp</dimen>
+    <dimen name="margin_88">108dp</dimen>
+    <dimen name="margin_80">100dp</dimen>
+    <dimen name="margin_52">64dp</dimen>
+    <dimen name="margin_50">62dp</dimen>
+    <dimen name="margin_44">56dp</dimen>
+    <dimen name="margin_15">22dp</dimen>
+    <dimen name="default_button_height">62dp</dimen>
+    <dimen name="default_view_height_large">72dp</dimen>
+    <dimen name="default_view_height_small">56dp</dimen>
+    <dimen name="default_image_size_large">320dp</dimen>
+    <dimen name="margin_66">82dp</dimen>
+    <dimen name="margin_46">58dp</dimen>
+    <dimen name="margin_25">34dp</dimen>
+    <dimen name="font_22">28sp</dimen>
+    <dimen name="product_card_width">220dp</dimen>
+    <dimen name="default_image_size_160dp">220dp</dimen>
+    <dimen name="default_button_size_small">40dp</dimen>
+</resources>

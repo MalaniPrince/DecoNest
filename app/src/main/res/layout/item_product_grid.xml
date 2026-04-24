@@ -1,160 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="6dp"
-    app:cardBackgroundColor="@color/color_white"
-    app:cardCornerRadius="14dp"
-    app:cardElevation="3dp">
+    android:layout_margin="@dimen/margin_4"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/color_secondary"
+    app:cardCornerRadius="@dimen/margin_12"
+    app:cardElevation="@dimen/card_elevation_4dp">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:paddingBottom="@dimen/padding_10">
 
         <FrameLayout
+            android:id="@+id/imageContainer"
             android:layout_width="match_parent"
-            android:layout_height="150dp">
+            android:layout_height="@dimen/default_image_size_160dp"
+            app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
                 android:id="@+id/ivGridProduct"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:adjustViewBounds="true"
                 android:scaleType="centerCrop"
-                android:src="@drawable/image1" />
+                tools:src="@drawable/placeholder_image" />
 
-            <!-- Discount badge (top-left) -->
             <TextView
                 android:id="@+id/tvGridDiscountBadge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="top|start"
-                android:layout_margin="7dp"
+                android:layout_margin="@dimen/margin_8"
                 android:background="@drawable/bg_gradient_accent"
-                android:paddingStart="7dp"
-                android:paddingEnd="7dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:textColor="#FFFFFF"
-                android:textSize="10sp"
+                android:paddingStart="@dimen/margin_6"
+                android:paddingEnd="@dimen/margin_6"
+                android:paddingTop="@dimen/margin_2"
+                android:paddingBottom="@dimen/margin_2"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_10"
                 android:textStyle="bold"
-                android:text="25% OFF"
-                android:visibility="visible" />
+                tools:text="25% OFF" />
 
-            <!-- Wishlist heart button (top-right) -->
-            <ImageView
-                android:id="@+id/btnGridWishlist"
-                android:layout_width="34dp"
-                android:layout_height="34dp"
-                android:layout_gravity="top|end"
-                android:layout_margin="7dp"
-                android:background="@drawable/circle_bg"
-                android:clickable="true"
-                android:focusable="true"
-                android:padding="8dp"
-                android:src="@drawable/ic_wishlist" />
-
-            <!-- New/Hot badge (bottom-left) -->
             <TextView
                 android:id="@+id/tvGridBadge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|start"
-                android:layout_margin="7dp"
+                android:layout_margin="@dimen/margin_8"
                 android:background="@drawable/bg_gradient_button"
-                android:paddingStart="8dp"
-                android:paddingEnd="8dp"
-                android:paddingTop="3dp"
-                android:paddingBottom="3dp"
-                android:textColor="#FFFFFF"
-                android:textSize="10sp"
+                android:paddingStart="@dimen/margin_8"
+                android:paddingEnd="@dimen/margin_8"
+                android:paddingTop="@dimen/margin_2"
+                android:paddingBottom="@dimen/margin_2"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_10"
                 android:textStyle="bold"
-                android:text="NEW"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:text="HOT"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/btnGridWishlist"
+                android:layout_width="@dimen/default_button_size_small"
+                android:layout_height="@dimen/default_button_size_small"
+                android:layout_gravity="top|end"
+                android:layout_margin="@dimen/margin_8"
+                android:background="@drawable/circle_bg"
+                android:padding="@dimen/margin_6"
+                android:src="@drawable/ic_wishlist"
+                app:tint="@color/color_white" />
 
         </FrameLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tvGridProductName"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="10dp">
+            android:layout_marginStart="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_8"
+            android:layout_marginEnd="@dimen/margin_10"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:textColor="@color/color_text_primary"
+            android:textSize="@dimen/font_13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageContainer"
+            tools:text="Modern Sofa" />
+
+        <TextView
+            android:id="@+id/tvGridProductCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_text_secondary"
+            android:textSize="@dimen/font_11"
+            app:layout_constraintEnd_toEndOf="@id/tvGridProductName"
+            app:layout_constraintStart_toStartOf="@id/tvGridProductName"
+            app:layout_constraintTop_toBottomOf="@id/tvGridProductName"
+            tools:text="Furniture" />
+
+        <RatingBar
+            android:id="@+id/ratingBarGridProduct"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4"
+            android:numStars="5"
+            android:stepSize="0.1"
+            app:layout_constraintStart_toStartOf="@id/tvGridProductName"
+            app:layout_constraintTop_toBottomOf="@id/tvGridProductCategory"
+            tools:rating="4.2" />
+
+        <TextView
+            android:id="@+id/tvGridProductMrp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4"
+            android:textColor="@color/color_tab_inactive"
+            android:textSize="@dimen/font_11"
+            app:layout_constraintStart_toStartOf="@id/tvGridProductName"
+            app:layout_constraintTop_toBottomOf="@id/ratingBarGridProduct"
+            tools:text="₹ 16,999" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/tvGridProductName"
+            app:layout_constraintStart_toStartOf="@id/tvGridProductName"
+            app:layout_constraintTop_toBottomOf="@id/tvGridProductMrp">
 
             <TextView
-                android:id="@+id/tvGridProductName"
-                android:layout_width="match_parent"
+                android:id="@+id/tvGridProductPrice"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="2"
-                android:text="Product Name"
-                android:textColor="@color/color_text_primary"
-                android:textSize="13sp"
-                android:textStyle="bold" />
+                android:layout_weight="1"
+                android:textColor="@color/color_tab_active"
+                android:textSize="@dimen/font_14"
+                android:textStyle="bold"
+                tools:text="₹ 12,999" />
 
-            <TextView
-                android:id="@+id/tvGridProductCategory"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:text="Category"
-                android:textColor="@color/color_text_secondary"
-                android:textSize="11sp" />
-
-            <RatingBar
-                android:id="@+id/ratingBarGridProduct"
-                style="?android:attr/ratingBarStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:isIndicator="true"
-                android:numStars="5"
-                android:rating="4.0"
-                android:progressTint="@color/color_tab_active"
-                android:secondaryProgressTint="@color/color_divider" />
-
-            <!-- MRP crossed out -->
-            <TextView
-                android:id="@+id/tvGridProductMrp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="₹16,999"
-                android:textSize="11sp"
-                android:textColor="#BDBDBD"
-                android:layout_marginTop="3dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:layout_marginTop="2dp">
-
-                <TextView
-                    android:id="@+id/tvGridProductPrice"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="₹12,999"
-                    android:textColor="@color/color_primary"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <ImageView
-                    android:id="@+id/btnGridAddToCart"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:background="@drawable/bg_gradient_accent"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:padding="7dp"
-                    android:src="@drawable/ic_nav_cart"
-                    android:tint="@color/color_white" />
-
-            </LinearLayout>
+            <ImageView
+                android:id="@+id/btnGridAddToCart"
+                android:layout_width="@dimen/default_button_size_small"
+                android:layout_height="@dimen/default_button_size_small"
+                android:background="@drawable/bg_gradient_accent"
+                android:padding="@dimen/margin_6"
+                android:src="@drawable/ic_nav_cart"
+                app:tint="@color/color_white" />
 
         </LinearLayout>
 
-    </LinearLayout>
-
-</androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

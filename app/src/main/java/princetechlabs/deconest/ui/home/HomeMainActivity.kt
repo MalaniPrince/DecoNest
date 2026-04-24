@@ -28,6 +28,9 @@ class HomeMainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Uncomment the line below ONCE to populate your Firestore with sample products
+        // princetechlabs.deconest.ui.utils.FirestoreUtils.seedDatabase()
+
         if (intent.getBooleanExtra("open_orders", false)) {
             loadFragment(OrdersFragment())
             binding.bottomNavigationView.selectedItemId = R.id.AccountFragment

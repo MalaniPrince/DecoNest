@@ -10,7 +10,21 @@
         android:id="@+id/HomeFragment"
         android:name="princetechlabs.deconest.ui.home.HomeFragment"
         android:label="@string/home_label"
-        tools:layout="@layout/fragment_first"/>
+        tools:layout="@layout/fragment_first">
+        <action
+            android:id="@+id/action_HomeFragment_to_CategoryProductsFragment"
+            app:destination="@id/CategoryProductsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/CategoryProductsFragment"
+        android:name="princetechlabs.deconest.ui.category.CategoryProductsFragment"
+        android:label="Category Products"
+        tools:layout="@layout/fragment_category_products">
+        <argument
+            android:name="categoryName"
+            app:argType="string" />
+    </fragment>
 
     <fragment
         android:id="@+id/CategoryFragment"
