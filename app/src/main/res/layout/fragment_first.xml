@@ -11,7 +11,8 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:overScrollMode="never">
+        android:overScrollMode="never"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,10 +24,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/margin_40"
                 android:background="@color/color_teal"
-                android:text="Extra 15% Off on All Home and Decor Orders*"
+                android:text="@string/offer_banner"
                 android:textColor="@color/color_white"
                 android:textSize="@dimen/font_13"
-                android:gravity="center" />
+                android:gravity="center"
+                android:elevation="4dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -39,28 +41,28 @@
                     android:id="@+id/layoutSearch"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/margin_48"
-                    android:layout_marginStart="@dimen/margin_14"
-                    android:layout_marginEnd="@dimen/margin_14"
-                    android:layout_marginTop="@dimen/margin_12"
-                    android:layout_marginBottom="@dimen/margin_10"
+                    android:layout_marginStart="@dimen/margin_16"
+                    android:layout_marginEnd="@dimen/margin_16"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:layout_marginBottom="@dimen/margin_12"
                     android:background="@drawable/search_bg"
                     android:orientation="horizontal"
                     android:gravity="center_vertical"
-                    android:paddingStart="@dimen/margin_14"
-                    android:paddingEnd="@dimen/margin_14">
+                    android:paddingStart="@dimen/margin_16"
+                    android:paddingEnd="@dimen/margin_16">
 
                     <ImageView
                         android:layout_width="@dimen/margin_20"
                         android:layout_height="@dimen/margin_20"
                         android:src="@drawable/ic_search"
-                        android:layout_marginEnd="@dimen/margin_10"
-                        android:adjustViewBounds="true" />
+                        android:layout_marginEnd="@dimen/margin_12"
+                        app:tint="@color/color_gray_text" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Search Sofas, Beds, Tables..."
-                        android:textSize="@dimen/font_13"
+                        android:textSize="@dimen/font_14"
                         android:textColor="@color/color_gray_text" />
 
                 </LinearLayout>
@@ -68,25 +70,30 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rvCategoryTabs"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/margin_46"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/margin_48"
                     android:nestedScrollingEnabled="false"
-                    android:paddingStart="@dimen/margin_4"
-                    android:paddingEnd="@dimen/margin_4" />
+                    android:paddingStart="@dimen/margin_12"
+                    android:paddingEnd="@dimen/margin_12"
+                    android:clipToPadding="false"
+                    android:overScrollMode="never" />
 
             </LinearLayout>
 
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/default_view_height_large"
-                android:layout_marginTop="@dimen/margin_8" />
+                android:layout_height="@dimen/default_image_size_large"
+                android:layout_marginTop="@dimen/margin_8"
+                android:layout_marginBottom="@dimen/margin_8" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/color_white"
                 android:orientation="vertical"
-                android:layout_marginTop="8dp">
+                android:layout_marginTop="8dp"
+                android:paddingBottom="@dimen/margin_16">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -94,24 +101,24 @@
                     android:orientation="horizontal"
                     android:paddingStart="@dimen/margin_16"
                     android:paddingEnd="@dimen/margin_16"
-                    android:paddingTop="@dimen/margin_14"
-                    android:paddingBottom="@dimen/margin_10"
+                    android:paddingTop="@dimen/margin_20"
+                    android:paddingBottom="@dimen/margin_12"
                     android:gravity="center_vertical">
 
                     <View
                         android:layout_width="@dimen/margin_4"
                         android:layout_height="@dimen/margin_20"
                         android:background="@color/color_tab_active"
-                        android:layout_marginEnd="@dimen/margin_8" />
+                        android:layout_marginEnd="@dimen/margin_12" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Shop by Category"
-                        android:textSize="@dimen/font_16"
+                        android:text="@string/section_shop_by_category"
+                        android:textSize="@dimen/font_18"
                         android:textStyle="bold"
-                        android:textColor="@color/color_dark_gray" />
+                        android:textColor="@color/color_black" />
 
                 </LinearLayout>
 
@@ -121,7 +128,7 @@
                     android:layout_height="wrap_content"
                     android:paddingStart="@dimen/margin_8"
                     android:paddingEnd="@dimen/margin_8"
-                    android:paddingBottom="@dimen/margin_14"
+                    android:clipToPadding="false"
                     android:nestedScrollingEnabled="false" />
 
             </LinearLayout>
@@ -137,23 +144,27 @@
                     android:layout_height="wrap_content"
                     android:background="@color/color_white"
                     android:orientation="vertical"
-                    android:layout_marginTop="8dp">
+                    android:layout_marginTop="8dp"
+                    android:paddingBottom="@dimen/margin_16">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/section_trending"
-                        android:textSize="@dimen/font_16"
+                        android:textSize="@dimen/font_18"
                         android:textStyle="bold"
                         android:paddingStart="@dimen/margin_16"
-                        android:paddingTop="@dimen/margin_14"
-                        android:textColor="@color/color_dark_gray" />
+                        android:paddingTop="@dimen/margin_20"
+                        android:paddingBottom="@dimen/margin_12"
+                        android:textColor="@color/color_black" />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recyclerView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingBottom="8dp" />
+                        android:paddingStart="@dimen/margin_8"
+                        android:paddingEnd="@dimen/margin_8"
+                        android:clipToPadding="false" />
 
                 </LinearLayout>
 
@@ -162,27 +173,30 @@
                     android:layout_height="wrap_content"
                     android:background="@color/color_white"
                     android:orientation="vertical"
-                    android:layout_marginTop="8dp">
+                    android:layout_marginTop="8dp"
+                    android:paddingBottom="@dimen/margin_16">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/section_new_arrivals"
-                        android:textSize="@dimen/font_16"
+                        android:textSize="@dimen/font_18"
                         android:textStyle="bold"
                         android:paddingStart="@dimen/margin_16"
-                        android:paddingTop="@dimen/margin_14"
-                        android:textColor="@color/color_dark_gray" />
+                        android:paddingTop="@dimen/margin_20"
+                        android:paddingBottom="@dimen/margin_12"
+                        android:textColor="@color/color_black" />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recyclerView2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingBottom="8dp" />
+                        android:paddingStart="@dimen/margin_8"
+                        android:paddingEnd="@dimen/margin_8"
+                        android:clipToPadding="false" />
 
                 </LinearLayout>
 
-                <!-- Recently Viewed — shown only after user browses products -->
                 <LinearLayout
                     android:id="@+id/layoutRecentlyViewed"
                     android:layout_width="match_parent"
@@ -191,6 +205,7 @@
                     android:orientation="vertical"
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
+                    android:paddingBottom="@dimen/margin_16"
                     android:visibility="gone">
 
                     <LinearLayout
@@ -199,24 +214,24 @@
                         android:orientation="horizontal"
                         android:paddingStart="@dimen/margin_16"
                         android:paddingEnd="@dimen/margin_16"
-                        android:paddingTop="@dimen/margin_14"
-                        android:paddingBottom="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_20"
+                        android:paddingBottom="@dimen/margin_12"
                         android:gravity="center_vertical">
 
                         <View
                             android:layout_width="@dimen/margin_4"
                             android:layout_height="@dimen/margin_20"
                             android:background="#9C27B0"
-                            android:layout_marginEnd="@dimen/margin_8" />
+                            android:layout_marginEnd="@dimen/margin_12" />
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/recently_viewed_title"
-                            android:textSize="@dimen/font_16"
+                            android:textSize="@dimen/font_18"
                             android:textStyle="bold"
-                            android:textColor="@color/color_dark_gray" />
+                            android:textColor="@color/color_black" />
 
                     </LinearLayout>
 
@@ -224,9 +239,8 @@
                         android:id="@+id/rvRecentlyViewed"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingStart="8dp"
-                        android:paddingEnd="8dp"
-                        android:paddingBottom="16dp"
+                        android:paddingStart="@dimen/margin_8"
+                        android:paddingEnd="@dimen/margin_8"
                         android:clipToPadding="false"
                         android:nestedScrollingEnabled="false" />
 
